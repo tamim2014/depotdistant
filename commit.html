@@ -87,64 +87,76 @@
 			
 			
 			<div class="plancheCadre "  >
-			    <h1 style="margin-left:0.2em; ">Lister les commit</h1>
-				<p class="paragraphe">
-                  <b style="font-size:2em;">git  <span style="color:red">&nbsp; log</span>&nbsp;   </b>
-			    </p>
-				&nbsp; Pour quitter le log taper: <b style="font-size:1.2em; color:#990033;">Q</b>
+			    <details>
+			        <summary style="margin-left:0.2em; font-size:2em">Lister les commit ?</summary>
+				    <p class="paragraphe">
+                       <b style="font-size:2em;">git  <span style="color:red">&nbsp; log</span>&nbsp;   </b>
+			        </p>
+				   &nbsp; Pour quitter le log taper: <b style="font-size:1.2em; color:#990033;">Q</b>
+			    </details>
 			</div>
-            <p class="boiteGris" style="height:20em;" ></p>			
+            <p class="boiteGris" style="height:16em;" ></p>			
 			<div class="plancheCadre" >
-			    <h1 style="margin-left:0.2em; ">Aller sur un commit</h1>
-				<p class="paragraphe">
-                  <b style="font-size:2em;">git  <span style="color:red">&nbsp; checkout</span>&nbsp;   <small style="font-weight:normal">SHADuCommit</small></b>
-			    </p>
-			
+			    <details>
+			        <summary style="margin-left:0.2em; font-size:2em ">Aller sur un commit ?</summary>
+				    <p class="paragraphe">
+                       <b style="font-size:2em;">git  <span style="color:red">&nbsp; checkout</span>&nbsp;   <small style="font-weight:normal">SHADuCommit</small></b>
+			        </p>
+		        </details>
 			</div>	
-			<p class="boiteGris" style="height:20em;" ></p>			
+			<p class="boiteGris" style="height:17em;" ></p>			
 			
 			<div class="plancheCadre" >
-			
-			    <h1 style="margin-left:0.2em; ">Revenir à votre branche principale (au commit le plus récent)</h1>
-				<p class="paragraphe">
-                  <b style="font-size:2em;">git  <span style="color:red">&nbsp; checkout</span>&nbsp;   <small style="font-weight:normal">master</small></b>
-			    </p>
+			    <details>
+			         <summary style="margin-left:0.2em; font-size:2em; ">Revenir à votre branche <br>&emsp; principale <small style="font-weight:normal; font-size:0.6em;">(au commit le plus récent)</small></summary>
+				     <p class="paragraphe">
+                        <b style="font-size:2em;">git  <span style="color:red">&nbsp; checkout</span>&nbsp;   <small style="font-weight:normal">master</small></b>
+			         </p>
+				</details>
 			</div>
-			<p class="boiteGris" style="height:23em; " ></p>	
+			<p class="boiteGris" style="height:18em; " ></p>	
 			
 
 			
 			<div class="plancheCadre" >
-			    <h1 style="margin-left:0.2em; ">Renommer un commit</h1>
-                <p class="paragraphe">
-                  <b style="font-size:2em;">git commit <span style="color:red">&nbsp; --amend</span>&nbsp; -m  <small style="font-weight:normal">"nouveau message"</small></b>
-                </p>
+			    <details>
+			         <summary style="margin-left:0.2em; font-size:2em; ">Renommer un commit ?</summary>
+                     <p class="paragraphe">
+                         <b style="font-size:2em;">git commit <span style="color:red">&nbsp; --amend</span>&nbsp; -m  <small style="font-weight:normal">"nouveau message"</small></b>
+                     </p>
+				</details>
 			</div>
-			<p class="boiteGris" style="height:21em; " ></p>
+			<p class="boiteGris" style="height:18em; " ></p>
 			
 			<div class="plancheCadre" >
-			    <h1 style="margin-left:0.2em; ">Annuler un commit <br>(après un push)</h1>
-				<p class="paragraphe">
-                  <b style="font-size:2em;">git  <span style="color:red">&nbsp; revert</span>&nbsp;   <small style="font-weight:normal">numero</small></b>
-			    </p>
+			    <details>
+			         <summary style="margin-left:0.2em; font-size:2em; ">Annuler un commit ? <br> &emsp; (après un push)</summary>
+				     <p class="paragraphe">
+                       <b style="font-size:2em;">git  <span style="color:red">&nbsp; revert</span>&nbsp;   <small style="font-weight:normal">numero</small></b>
+			         </p>
+				</details>
 			</div>
-			<p class="boiteGris" style="height:21em; " ></p>
+			<p class="boiteGris" style="height:18em; " ></p>
 			
 			<div class="plancheCadre" >
-			    <h1 style="margin-left:0.2em; ">Annuler les 3 derniers commits</h1>
-				<p class="paragraphe">
-                  <b style="font-size:2em;">git  <span style="color:red">&nbsp; revert</span>&nbsp;   <small style="font-weight:normal">HEAD~3</small><span style="color:#990099">..HEAD</span></b>
-			    </p>
+			    <details>
+			         <summary style="margin-left:0.2em; font-size:2em; ">Annuler les 3 derniers<br> &emsp; commits</summary>
+				     <p class="paragraphe">
+                          <b style="font-size:2em;">git  <span style="color:red">&nbsp; revert</span>&nbsp;   <small style="font-weight:normal">HEAD~3</small><span style="color:#990099">..HEAD</span></b>
+			         </p>
+				</details>
 			</div>
-			<p class="boiteGris" style="height:24em; " ></p>
+			<p class="boiteGris" style="height:20em; " ></p>
 			
 			<div class="plancheCadre" >
-			    <h1 style="margin-left:0.2em; ">Annuler les changements non commités</h1>
-				<p class="paragraphe">
-                  <b style="font-size:2em;">git  <span style="color:red">&nbsp; reset</span>&nbsp;   <span style="color:#990099">--hard</span></b>
-			    </p>
+			    <details>
+			         <summary style="margin-left:0.2em; font-size:2em; ">Annuler les changements<br> &emsp; non commités</summary>
+				     <p class="paragraphe">
+                         <b style="font-size:2em;">git  <span style="color:red">&nbsp; reset</span>&nbsp;   <span style="color:#990099">--hard</span></b>
+			         </p>
+			     </details>
 			</div>
-			<p class="boiteGris" style="height:21em; " ></p>
+			<p class="boiteGris" style="height:18em; " ></p>
 			
 			<div class="plancheCadre" >
 			    <h1 style="margin-left:0.2em; ">Bibliographie:</h1>
