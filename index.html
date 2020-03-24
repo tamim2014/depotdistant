@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
+	<title>Rappels javascripts</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<link rel="stylesheet" href="css/sticky.css">
+    <style>		
+		.R{color:#990033; font-weight:bold; }
+		.idR{
+			color:#115; 
+			border:1px solid #8c8b8b; 
+			padding:1px 4px; 
+			border-radius:3px;
+			box-shadow:2px 2px 0.5px 0.5px #8c8b8b; 
+		}
+		.idS{
+			border:1px solid #8c8b8b; 
+			padding:1px 4px; 
+			border-radius:3px;
+			box-shadow:2px 2px 0.5px 0.5px #8c8b8b; 
+		}
+		ol{
+			line-height: 2em;
+		}
+		.onglet1-sujet { 
+		
+		  float: left; 
+		  width:87%;
+		  height: 90% ;  
+		  padding:20px;
+		  margin:2.5% 6.5%;
+		  background-color:#555;   
+		  box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		  border:1px solid #8c8b8b;
+		  border-radius: 0px;  
+		}
+
+    </style>	
+</head>
+<body>
+
+	<div id="entete"></div>
+	<div id="menu">
+		<a href="index.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<a href="branch.html">Branch</a>
+		<a href="commit.html">Commit</a>
+		<a href="depotdistant.html">Dépôt distant</a>
+		
+		<div class="dropdown">
+			<button class="dropdown-btn">Divers rappels</button>
+			<div class="dropdown-content">
+			    <a href="rappels-linux.html">Linux</a>
+			    <a href="interfaces-js.html" >DOM</a>						
+			</div>
+		</div>
+	</div>
+	<div id="contenu">
+		<div class="colone-laterale" id="sidbarG">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		
+		<div class="colone-contenu" id="contenu_">
+		    <h2 class="grosTitre"><span class="box-shadow-titre" > Installation Git </span></h2>
+			<div class="planche" >
+			    <h1 style="margin-left:0.8em;" >Recapitulatif</h1>
+	            <img src="img/recapitulatif.png" class="onglet1-sujet " style=" margin-top:-1em;"/>
+			</div>
+			
+			<div class="planche">
+			   <h3 style="margin-left:1.4em;"> Etape1: Lancer Git Bash </h3>
+			   <img src="img/lancer-git-bash.png" class="onglet1-sujet"   />		   
+			</div>
+			<div class="planche">
+				<h3> Etape2: Connecter le dépot locale <br>&emsp;&emsp;&emsp;et le dépot distant(<span style="font-size:0.6em;"><span class="idR" style="color:red">init</span> , <span class="idR" style="color:blue">add</span> , <span class="idR" style="color:#990033;">remote add</span></span>) </h3>
+				<ol>
+					<li>
+						  <p style="padding-bottom:0; margin-bottom:0;">Ajouter le dossier <span class="idR" style="color:red">.git</span>(dépot local)</p>
+						  <ul type="square" style="padding-top:0; margin-top:0;">
+							 <li> se positionner sur le projet et saisir la commande suivante:</li>
+							 <li><span class="idS" > git <span style="color:red">init</span> </span></li>		      	
+						  </ul>			
+					</li>
+					<li>
+						  <p>Enregistrer le projet sur le dossier <span class="idR" style="color:red; padding-bottom: 0.8em;">.git</span></p>
+						  <ul type="square">
+							 <li><span class="idR" > git  <span style="color:blue">add</span> &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;&emsp; <span class="idR" style="color:red; font-size:3em;">.</span></span></li>	
+							 <li><span class="idS" > git commit -m "premier commit" </span></li>		      	
+						  </ul>				
+					</li>
+					<li>
+						  <p style="padding-bottom:0; margin-bottom:0;">Connecter le dépot local et le dépot distant</p>
+						  <ul type="square">
+							 <li><a href="depotdistant.html">Ajouter un nouveau dépot distant(github.com)</a></li>	
+							 <li><span class="idS" > git <b class="R">remote  add </b> <span style="color:#2c7e87">[origin]</span> <span style="color:#52bbc7">[url dépot distant]</span>&nbsp;&nbsp;<b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b></span></li>		      	
+						  </ul>							
+					</li>
+				</ol>
+	   
+			</div>
+
+
+		    <div class="planche">
+				<h3>Etape3: Commencer à bosser</h3>
+	            <p><b style="color:#4d94ff" >&#9193;&nbsp; C'est fini:</b><br> &nbsp; dépôt local &equiv; <span style="color:red" class="idR">.git</span> , dépôt distant &equiv; <span style="color:#2c7e87" class="idR">origin</span>  </p>
+	            <b style="color:#4d94ff" >&#9193;&nbsp; Pour envoyer le projet:</b><br> &nbsp; <span class="idR">git <b class="R">push </b> <span style="color:#2c7e87">[origin]</span> <span style="color:#52bbc7">[nom branche distant]</span> </span><br><br>
+	            <b style="color:#4d94ff" >&#9193;&nbsp; Pour r&eacute;cup&eacute;rer un projet:</b><br> &nbsp; <span class="idR">git <b class="R">pull </b> <span style="color:#2c7e87">[??]</span> <span style="color:#52bbc7">[???]</span> </span><br>
+
+			</div>
+			
+			<div class="planche" >
+			    <h1 style="margin-left:0.8em;" >Recapitulatif</h1>
+	            <img src="img/recapitulatif.png" class="onglet1-sujet " style=" margin-top:-1em;"/>
+			</div>
+			
+			<div class="planche">
+			    <h1 style="margin-left:0.8em;"> Exemple:</h1>
+                <img src="img/exemple.png" class="onglet1-sujet " style=" margin-top:-1em;"/>
+			</div>
+			
+			
+			<div class="planche">
+			    <h1 style="margin-left:0.2em; ">Forcer un push</h1>
+                <p class="paragraphe">
+				  <b style="font-size:2em;">git push <span style="color:red">-f</span> <span class="idS" >origin</span>  master</b>
+                </p>
+			</div>
+			
+					
+		</div><!-- #colone-contenu -->
+		
+	
+		
+		<div class="colone-laterale" id="sidbarD" >
+			<p class="paragraphe" style="background:#8c8b81" >
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer" >
+		<table class="footer-table" >
+		  <tr>
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+			 
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+
+			 <td class="footer-td" style="width:20%;" >
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add("newClassName");<br>
+				 &emsp;&bull; classList.toggle("newClassName");		 
+			 </td>
+		
+		  </tr>
+		</table>
+	</div><!-- #footer -->
+    <script type="text/javascript" src="js/sticky.js"></script>
+</body>
+</html>
