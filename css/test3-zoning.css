@@ -21,14 +21,19 @@
 			margin-top: 2em; 
 			/* border: 1px solid #8c8b8b; */
 		}
-	   .paragraphe{
+		/* les classes: .boiteGris et .plancheCadre vont ensemble pour encadrer une planche ( voir commit.html) */ 
+	   .paragraphe, .boiteGris{
 			border:1px solid #8c8b8b; 
 			padding: 0.5em;
 			margin:0.5em; 
 			border-radius: 2px;
 		}
+		.boiteGris{
+		    padding-left:1.5em; 
+			background:#bbb;
+		}
 		
-		img , .img, .planche, .grosTitre, .grosTitreBlanc{ 
+		img , .img, .planche, .plancheCadre, .grosTitre, .grosTitreBlanc{ 
 		  float: left; 
 		  width:87%;
 		  height: 90% ;
@@ -40,9 +45,11 @@
 		  border:1px solid #8c8b8b;
 		  border-radius: 4px; 	  
 		}
+
+		.plancheCadre{ margin:3em 2em;  }
 		.grosTitre, .grosTitreBlanc{text-align: center;}
 		img , .img, .grosTitre{ background: #555; }
-		.planche, .grosTitreBlanc{ background: #f7f7f9 }
+		.planche, .grosTitreBlanc, .plancheCadre{ background: #f7f7f9 }
 		
 		.ColonesDeCode {
 		  padding:15px;	
