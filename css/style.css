@@ -42,7 +42,24 @@
 		.footer-image{
 			margin:1.2em;			
 			background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("img/footer-image.png");	
+
 		}
+		
+	/* MESSAGE HEADER */
+	.hero-image {
+	  height: 200px;
+	  position: relative;
+	}
+
+	.hero-text {
+	  text-align: center;
+	  position: absolute;
+	  top: 4.4em;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  color: white;
+	}
+	
   
 	
 	
