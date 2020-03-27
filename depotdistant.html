@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/sticky.css">
     <link rel="stylesheet" href="css/style.css">
 	<style>
-		 summary{ width:87%; }	   
+		 summary{ width:87%; margin-bottom:1em;  }	   
 	</style>
 	
 </head>
@@ -47,14 +47,14 @@
             
 			<div class="planche">
 			    <details>
-			         <summary><b>Nouveau  projet:<span style="font-size:0.8em"> sur le serveur distant<small> ( origin )</small> </span></b></summary>
+			         <summary><b>Nouveau  projet:<span style="font-size:0.8em"> sur le serveur distant<small> ( origin )</small> ? </span></b></summary>
 			         <img src="img/newdepot2.png" class="onglet1-sujet "/>
                 </details>					 
 			</div>
 			
 			<div class="planche">
 			    <details>
-			         <summary><b>Nommer le projet:</b></summary>
+			         <summary><b>Nommer le projet ?</b></summary>
 			         <img src="img/newdepot3.png" class="onglet1-sujet "/>
                 </details>					 
 			</div>
@@ -63,7 +63,7 @@
 			
 			<div class="planche">
 			    <details>
-			         <summary><b>Liaison:<span style="font-size:0.8em"> Dépot local<small> ( .git )</small> &#8596; dépot distant<small> ( origin )</small></span></b></summary>
+			         <summary><b>Liaison:<span style="font-size:0.8em"> Dépot local<small> ( .git )</small> &#8596; dépot distant<small> ( origin )</small></span> ?</b></summary>
 			         <span class="idS" style="margin-left:1.7em;"> git remote <b class="R"> add </b> origin <b class="R">[url dépot distant]</b></span><br>
 			         <img src="img/git-remote.png" class="onglet1-sujet"   />	
                     <img src="img/newdepot4.png"  class="onglet1-sujet "/>			   
@@ -71,9 +71,24 @@
 			</div>
 			
 			<div class="planche">
-			   <h3 style="margin-left:1.4em;">Liaison:<span style="font-size:0.8em"> Dépot local<small> ( .git )</small> &#8596; dépot distant<small> ( origin )</small></span></h3>
-			   <img src="img/git-remote.png" class="onglet1-sujet"   />		   
+			    <details>
+			         <summary><b>Nom du serveur distant ?</b></summary>
+			         <span class="idS" style="margin-left:1.7em;"> git remote </span><br>
+			         <img src="img/git-remote-.png" class="onglet1-sujet" style="margin-bottom:1em !important;"   /><span style="color:transparent">...</span>				   
+			    </details>
+				<details>	     
+			         <summary><b>Serveur, @, et dépôts du serveur distant ?</b></summary>
+			         <span class="idS" style="margin-left:1.7em;"> git remote <b class="R"> -v </b> </span><br>
+			         <img src="img/git-remote-v.png" class="onglet1-sujet"   /><span style="color:transparent; ">...</span>				   
+			    </details>
+				<details>	     
+			         <summary><b>Dépôts, @, et branches du serveur distant ?</b></summary>
+			         <span class="idS" style="margin-left:1.7em;"> git remote <b class="R"> show </b> origin </span><br>
+			         <img src="img/git-remote-show.png" class="onglet1-sujet"   />				   
+			    </details>
 			</div>
+			
+
 			
 		</div><!-- #colone-contenu -->
 		
