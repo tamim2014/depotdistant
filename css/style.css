@@ -124,6 +124,18 @@
 	   width:96%;
 	   box-shadow:
 	     0px 2px 20px 0px white inset,
-		 0px 2px 10px 0px ;
-	   
+		 0px 2px 10px 0px ;	   
 	 }
+
+
+    /* Les video du bas de page */
+	.titre-video{
+	     position:relative;
+		 margin:0;
+		 padding:0 6em;
+		 color:#ECECEA;
+	}
+
+	video, iframe {
+	     margin-top:0.1em !important;
+	}
