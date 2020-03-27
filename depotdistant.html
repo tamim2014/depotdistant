@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="css/sticky.css">
     <link rel="stylesheet" href="css/style.css">
 	<style>
-		 summary{ width:87%; margin-bottom:1em;  }	   
+		 summary{ width:87%; margin-bottom:1em;  }
+         small{ font-weight:normal; font-family:calibri light; font-style:italic; }		 
 	</style>
 	
 </head>
@@ -21,7 +22,7 @@
 		<a href="index.html" style="background:#3d3d5c; color:#ECECEA;">Accueil</a>
 		<a href="branch.html">Branch</a>
 		<a href="commit.html">Commit</a>
-		<a href="depotdistant.html">Dépôt distant</a>
+		<a href="depotdistant.html">D&eacute;p&ocirc;t distant</a>
 		<div class="dropdown">
 			<button class="dropdown-btn">Divers rappels</button>
 			<div class="dropdown-content">
@@ -34,16 +35,16 @@
 	<div id="contenu">
 		<div class="colone-laterale" id="sidbarG">
 			<p class="paragraphe">
-					&#9203; Début:20h<br>
+					&#9203; D&eacute;but:20h<br>
 					&#8987; Fin HTML: 20h10<br>
 					&#8987; Fin CSS et test:21h05 <br>
 				
-					&#9200; Durée totale: 55mn
+					&#9200; Dur&eacute;e totale: 55mn
 			</p>
 		</div>
 		
 		<div class="colone-contenu" id="contenu_">
-		    <h2 class="grosTitre"><span class="box-shadow-titre" > Dépôt distant </span></h2>
+		    <h2 class="grosTitre"><span class="box-shadow-titre" > D&eacute;p&ocirc;t distant </span></h2>
             
 			<div class="planche">
 			    <details>
@@ -63,8 +64,8 @@
 			
 			<div class="planche">
 			    <details>
-			         <summary><b>Ajouter un dépôt distant ?<br>&emsp;<span style="font-size:0.8em"> Dépot local<small> ( .git )</small> &#8596; dépot distant<small> ( <b class="V">nom</b> et <b class="VF">adresse-du-dépôt</b> )</small></span> </b></summary>
-			         <span class="idS" style="margin-left:1.7em;"> git remote <b class="R"> add </b><b class="V"> origin</b><b class="VF"> [url-dépôt-distant]</b></span><br>
+			         <summary><b>Ajouter un d&eacute;p&ocirc;t distant ?<br>&emsp;<span style="font-size:0.8em"> D&eacute;pot local<small> ( .git )</small> &#8596; d&eacute;pot distant<small> ( <b class="V">nom</b> et <b class="VF">adresse-du-d&eacute;p&ocirc;t</b> )</small></span> </b></summary>
+			         <span class="idS" style="margin-left:1.7em;"> git remote <b class="R"> add </b><b class="V"> origin</b><b class="VF"> [url-d&eacute;p&ocirc;t-distant]</b></span><br>
 			         <img src="img/git-remote.png" class="onglet1-sujet"   />	
                     <img src="img/newdepot4.png"  class="onglet1-sujet "/>			   
 			    </details>
@@ -80,14 +81,37 @@
 			         <img src="img/git-remote-.png" class="onglet1-sujet" style="margin-bottom:1em !important;"   /><span style="color:transparent">...</span>				   
 			    </details>
 				<details>	     
-			         <summary><b>Serveur, @, et dépôts du serveur distant ?</b></summary>
+			         <summary><b>Noms et adresses des remotes ?</b></summary>
 			         <span class="idS" style="margin-left:1.7em;"> git remote <b class="R"> -v </b> </span><br>
 			         <img src="img/git-remote-v.png" class="onglet1-sujet"   /><span style="color:transparent; ">...</span>				   
 			    </details>
 				<details>	     
-			         <summary><b>Dépôts, @, et branches du serveur distant ?</b></summary>
+			         <summary><b>Noms, adresse, et  branches des remotes ?</b></summary>
 			         <span class="idS" style="margin-left:1.7em;"> git remote <b class="R"> show </b> <b class="V"> origin</b> </span><br>
 			         <img src="img/git-remote-show.png" class="onglet1-sujet"   />				   
+			    </details>
+			</div>
+			
+			<div class="planche">
+			    <details>
+			         <summary><b>Pousser ( <small>vers une branche distante</small> ) ? </b></summary>
+			         <span class="idS" style="margin-left:1.7em; "> git <b class="R"> push </b><b class="V"> &nbsp;&nbsp; nom-repertoire-distant </b><b class="VF"> &nbsp;&nbsp; nom-branche</b></span><br>		   
+			    </details>
+				<details style="margin-top:1em">
+			         <summary><b>R&eacute;cuperer ( <small>une banche distante</small> ) ? </b></summary>
+			         <span class="idS" style="margin-left:1.7em; "> git <b class="R"> pull </b><b class="V"> &nbsp;&nbsp; nom-repertoire-distant </b><b class="VF"> &nbsp;&nbsp; nom-branche</b></span><br><br>
+                     <span class="idS" style="margin-left:1.7em;"> git <b class="R"> fetch </b><b class="V"> &nbsp;nom-repertoire-distant </b><b class="VF"> &nbsp;&nbsp; nom-branche</b></span><br>						 
+			    </details>
+				<details style="margin-top:1em">
+			         <summary><b>Diff&eacute;fference entre <b class="R"> pull </b> et <b class="R"> fetch </b>? </b></summary>
+			         <span class="idS" style="margin-left:1.7em; "><b class="R"> pull :</b> R&eacute;cupère et merge </span><br><br>
+                     <span class="idS" style="margin-left:1.7em;"><b class="R"> fetch :</b> R&eacute;cupère sans merge </span><br>						 
+			    </details>
+			</div>
+			<div class="planche">
+				<details style="margin-top:1em">
+			         <summary><b>R&eacute;cuperer un r&eacute;pertoire distant ?<br>&emsp;(<small> pas seulement une banche </small>) !</b></summary>
+			         <span class="idS" style="margin-left:1.7em; "> git <b class="R"> clone </b><b class="V">&nbsp;@Remote:nomRemote </b><small><b class="VF"> &nbsp;nomDossierDest&nbsp; </b></small></span><br>					 
 			    </details>
 			</div>
 			
@@ -97,11 +121,11 @@
 		
 		<div class="colone-laterale" id="sidbarD" >
 			<p class="paragraphe" style="background:#8c8b81" >
-					&#9203; Début:20h<br>
+					&#9203; D&eacute;but:20h<br>
 					&#8987; Fin HTML: 20h10<br>
 					&#8987; Fin CSS et test:21h05 <br>
 				
-					&#8986; Durée totale: 55mn
+					&#8986; Dur&eacute;e totale: 55mn
 			</p>
 		</div>
 	</div>
@@ -110,10 +134,10 @@
 		<table class="footer-table" >
 		  <tr>
 			 <td class="footer-td" style="width:20%;">
-				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 <span style="color:#f7f7f9;" >&#8718; Proprier&eacute;s:</span><br>
 				 &emsp;&bull; offsetTop<br>
 				 &emsp;&bull; pageYOffset<br>
-				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 <span style="color:#f7f7f9;" >&#8718; M&eacute;thodes:</span><br>
 				 &emsp;&bull; classList.add();<br>
 				 &emsp;&bull; classList.toggle();		 
 			 </td>
@@ -123,10 +147,10 @@
 			 </td>
 
 			 <td class="footer-td" style="width:20%;" >
-				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 <span style="color:#f7f7f9;" >&#8718; Proprier&eacute;s:</span><br>
 				 &emsp;&bull; offsetTop<br>
 				 &emsp;&bull; pageYOffset<br>
-				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 <span style="color:#f7f7f9;" >&#8718; M&eacute;thodes:</span><br>
 				 &emsp;&bull; classList.add("newClassName");<br>
 				 &emsp;&bull; classList.toggle("newClassName");		 
 			 </td>
