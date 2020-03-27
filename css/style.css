@@ -101,3 +101,14 @@
 	}	
 	
 	/*################################################################# */	
+
+	 summary{
+	   margin-left:1.6em;
+	   padding:0.5em;
+	   background:#ccf;
+	   width:87%;
+	   box-shadow:
+	     0px 2px 20px 0px #660066 inset,
+		 0px 2px 10px 0px ;
+	   
+	 }

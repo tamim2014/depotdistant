@@ -6,7 +6,19 @@
 	<link rel="stylesheet" href="css/test3-zoning.css" >
 	<link rel="stylesheet" href="css/test3-dropdown.css" >
 	<link rel="stylesheet" href="css/sticky.css">
-    <link rel="stylesheet" href="css/style.css">	
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+	 summary{
+	   margin-left:1.6em;
+	   padding:0.5em;
+	   background:#ccf;
+	   width:87%;
+	   box-shadow:
+	     0px 2px 20px 0px #660066 inset,
+		 0px 2px 10px 0px ;
+	   font-size:1em;
+	 }
+    </style>	
 </head>
 <body >
 
@@ -40,21 +52,36 @@
 		
 		<div class="colone-contenu" id="contenu_">
 		    <h2 class="grosTitre"><span class="box-shadow-titre" > Dépôt distant </span></h2>
+            
+			<div class="planche">
+			    <details>
+			         <summary><b>Nouveau  projet:<span style="font-size:0.8em"> sur le serveur distant<small> ( origin )</small> </span></b></summary>
+			         <img src="img/newdepot2.png" class="onglet1-sujet "/>
+                </details>					 
+			</div>
+			
+			<div class="planche">
+			    <details>
+			         <summary><b>Nommer le projet:</b></summary>
+			         <img src="img/newdepot3.png" class="onglet1-sujet "/>
+                </details>					 
+			</div>
+            
 
-            <ol>
-				<li>
-					  <p>Nouveau  projet</p>
-					  <img src="img/newdepot2.png" class="onglet1-sujet "/>				
-				</li>
-				<li>
-					  <p>Nommer le  projet</p>
-					  <img src="img/newdepot3.png" class="onglet1-sujet "/>						
-				</li>
-				<li>
-					  <p>Prendre l'url. c'est l'argument de la commande <br> <span class="idS" > git remote <b class="R"> add </b> origin <b class="R">[url dépot distant]</b></span></p>
-					  <img src="img/newdepot4.png"  class="onglet1-sujet "/>						
-				</li>
-	        </ol>
+			
+			<div class="planche">
+			    <details>
+			         <summary><b>Liaison:<span style="font-size:0.8em"> Dépot local<small> ( .git )</small> &#8596; dépot distant<small> ( origin )</small></span></b></summary>
+			         <span class="idS" style="margin-left:1.7em;"> git remote <b class="R"> add </b> origin <b class="R">[url dépot distant]</b></span><br>
+			         <img src="img/git-remote.png" class="onglet1-sujet"   />	
+                    <img src="img/newdepot4.png"  class="onglet1-sujet "/>			   
+			    </details>
+			</div>
+			
+			<div class="planche">
+			   <h3 style="margin-left:1.4em;">Liaison:<span style="font-size:0.8em"> Dépot local<small> ( .git )</small> &#8596; dépot distant<small> ( origin )</small></span></h3>
+			   <img src="img/git-remote.png" class="onglet1-sujet"   />		   
+			</div>
 			
 		</div><!-- #colone-contenu -->
 		
