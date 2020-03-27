@@ -129,6 +129,11 @@
 
 
     /* Les video du bas de page */
+    	
+	td.footer-td {
+	     height:12em !important;
+	}
+	
 	.titre-video{
 	     position:relative;
 		 margin:0;
