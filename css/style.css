@@ -133,6 +133,12 @@
 	td.footer-td {
 	     height:12em !important;
 	}
+	td.footer-td:hover {
+	    
+		 width:25% !important;
+		 position:relative;	
+		 transition: all .5s ease-out;
+	}
 	
 	.titre-video{
 	     position:relative;
@@ -141,6 +147,4 @@
 		 color:#ECECEA;
 	}
 
-	video, iframe {
-	     margin-top:0.1em !important;
-	}
+	
