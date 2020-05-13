@@ -4,7 +4,12 @@
 		#entete{ height: 200px; background: #555; }
 		#footer{ min-height: 100px; background: #555; margin-top:2em; }
 
-		#menu{ height: 48px; background: #c4c4c4; }
+		#menu{ 
+		   height: 48px; 
+		   background:#3d3d5c; /* #c4c4c4; */
+		   z-index:2;
+		   /* box-shadow: 0px -2px 2px 0px #4CAF50 inset; ligne verte en bas du menu */			
+		}
 		#menu a {
 			float:left;
 			padding: 14px 16px;
