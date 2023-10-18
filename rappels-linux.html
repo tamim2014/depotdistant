@@ -52,16 +52,37 @@
 			
 			
 			<div class="planche">
-			    <h1 style="margin-left:0.2em; ">En cas de bug: <small>supprimer le dépot local et recommencer</small></h1>
+			    <h4 style="margin-left:0.2em; ">En cas de bug: <small>supprimer le dépot local et recommencer</small></h4>
                 <p class="paragraphe">
 				  <b style="font-size:2em;">ls -lha </b><br>
                   <b style="font-size:2em;">rm -r<span style="color:red">f</span> <span class="idS" >.git</span> </b>
                 </p>
 			</div>
 			
+			<div class="planche" style="height:auto !important;">
+			    <h4>Supprimer un fichier dont le nom est précédé d'un tiret :</h4>
+                <h5 style="font-size:2em; padding:0;">rm <span style="color:blue; ">--</span> <span style="color:red; ">-</span>fichier</h5> 
+			</div>
 			<div class="planche">
-			    <h3>Supprimer un fichier dont le nom est précédé d'un tiret :</h3>
-                <h4 style="font-size:4em;">rm <span style="color:blue; ">--</span> <span style="color:red; ">-</span>fichier</h4> 
+			    <h4 style="margin-left:0.2em; ">chmod:<br> 
+				     <small> &bull; Le premier chiffre fixe l'accès de l'usager propriétaire, <br> &bull; le deuxième pour groupe propriétaire <br> &bull; et le dernier pour les « autres ». <br><span style="color:gray">Chaque chiffre est la somme d'un ou plusieurs chiffres correspondant à des accès différents:</span><br></small>
+					  4 : lecture<br>
+                      2 : écriture<br>
+                      1 : exécution<br>
+                      0 : aucun<br>
+				</h4>
+				Tous les droits pour le proprietaire et rien pour les autres
+                <p class="paragraphe">
+				  <b style="font-size:2em;">chmod 700 <span style="color:gray; font-size:.5em;">nomFichier</span> </b>
+                </p>
+				Tous les droits pour le proprietaire <br> "Lecture" et "Execution" pour le reste
+                <p class="paragraphe">
+				  <b style="font-size:2em;">chmod 755 <span style="color:gray; font-size:.5em;">nomFichier</span> </b>
+                </p>
+				"Lecture/Ecriture"  pour le proprietaire et son groupe <br> "Lecture" seulement pour les autres
+                <p class="paragraphe">
+				  <b style="font-size:2em;">chmod 664 <span style="color:gray; font-size:.5em;">nomFichier</span> </b>
+                </p>
 			</div>
 			
 					

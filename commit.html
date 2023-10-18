@@ -51,23 +51,27 @@
 		</div>
 		
 		<div class="colone-contenu" id="contenu_">
-		    <h2 class="grosTitre"><span class="box-shadow-titre" > Commit </span></h2>
-
-			<div class="planche" >
-			    <h1 style="margin-left:0.8em;" >Recapitulatif</h1>
-	            <img src="img/recapitulatif.png" class="onglet1-sujet " style=" margin-top:-1em;"/>
+		    <!-- <h2 class="grosTitre" style="padding-top:1em"><span class="box-shadow-titre" > Commit </span></h2> -->
+		    <h2 class="grosTitre" style="padding-top:1.5em; margin-top:.7em; height:3.7em;  "><span class="box-shadow-titre" > Commit </span></h2>
+            
+            
+			<!-- <div class="planche" > -->
+			    <!-- <h1 style="margin-left:0.8em;" >Recapitulatif</h1> -->
+	           <!-- <img src="img/recapitulatif.png" class="onglet1-sujet " style=" margin-top:1em;"/>   -->
+			<!-- </div> -->
+			<p class="boiteGris" style="height:6.5em; padding:0; background:#555;" ></p>	
+			<div class="plancheCadre">
+			    <details >
+			         <summary style="margin-left:0.2em; font-size:2em">Mise à jour de code<span style="font-size:0.8em"> ( sans nouveau fichier) ? </span></summary>
+			         <span style="font-size:1.5em;">
+					    On remplace l'étape2( git add . ) par l'option <b style="color:#990033; font-size:1.2em;"> -a </b><br>
+					    <span class="idS" > git commit <b style="color:#990033; font-size:1.2em;"> -a</b>&nbsp; -m "blabla" </span>&nbsp; ou &nbsp; 
+					    <br><span class="idS" > git commit <b style="color:#990033; font-size:1.2em; "> -a</b>m "blabla" </span>
+                     </span>
+				</details>
+                			
 			</div>
-			<p style="margin-top:4.5em;"></p>
-			<p class="paragraphe " style="padding-left:1.5em; background:#bbb; height:40em;  margin-top:-4em;" >
-			   <span style="color:#115">
-			     Mise à jour de code( sans nouveau fichier):<br>
-				 On saute l'étape2. On le remplace par l'option <b style="color:#990033; font-size:1.2em;"> -a</b><br>
-			     <span class="idS" > git commit <b style="color:#990033; font-size:1.2em;"> -a</b>&nbsp; -m "blabla" </span>&nbsp; ou &nbsp; 
-				 <span class="idS" > git commit <b style="color:#990033; font-size:1.2em; "> -a</b>m "blabla" </span>
-			    </span>
-			</p>
-			
-			
+			<p class="boiteGris" style="height:18em;" ></p>	
 			<div class="plancheCadre "  >
 			    <details>
 			        <summary style="margin-left:0.2em; font-size:2em">Lister les commit ?</summary>
@@ -78,6 +82,15 @@
 			    </details>
 			</div>
             <p class="boiteGris" style="height:18em;" ></p>			
+			<div class="plancheCadre" >
+			    <details>
+			        <summary style="margin-left:0.2em; font-size:2em ">Les changements non commités ?</summary>
+				    <p class="paragraphe">
+                       <b style="font-size:2em;">git  <span style="color:red">&nbsp; diff</span></b>
+			        </p>
+		        </details>
+			</div>	
+			<p class="boiteGris" style="height:20em;" ></p>					
 			<div class="plancheCadre" >
 			    <details>
 			        <summary style="margin-left:0.2em; font-size:2em ">Aller sur un commit ?</summary>

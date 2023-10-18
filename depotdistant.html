@@ -31,6 +31,7 @@
 			</div>
 		</div>
 		
+		
 	</div>
 	<div id="contenu">
 		<div class="colone-laterale" id="sidbarG">
@@ -50,7 +51,8 @@
 			    <details>
 			         <summary><b>Nouveau  projet:<span style="font-size:0.8em"> sur le serveur distant<small> ( origin )</small> ? </span></b></summary>
 			         <img src="img/newdepot2.png" class="onglet1-sujet "/>
-                </details>					 
+                </details>
+                &emsp;&emsp; https://github.com/new				
 			</div>
 			
 			<div class="planche">
@@ -114,6 +116,17 @@
 					 <span class="idS" style="margin-left:1.7em; "> <b class="R"> cd  </b><small><b class="VF"> &nbsp;nomDossierDest&nbsp; </b></small></span><br>	
 			         <span class="idS" style="margin-left:1.7em; "> git <b class="R"> init </b></span><br>	
 					 <span class="idS" style="margin-left:1.7em; "> git <b class="R"> clone </b><b class="V">&nbsp;@Remote:nomRemote </b><small><b class="VF"> &nbsp;nomDossierDest&nbsp; </b></small></span><br>					 
+			    </details>
+			</div>
+			<div class="planche">
+				<details style="margin-top:1em; line-height:1.7">
+			         <summary><b>Echec d'un push ?<br>&emsp;(<small> fichiers trop volumineux </small> ! )</b></summary>
+					 <span class="idS" style="margin-left:1.7em; "> <b class="R"> Augmenter la taille du buffer:  </b></span><br>	
+					 <span class="idS" style="margin-left:1.7em; "> <small><b class="VF"> git config --global http.postBuffer 1048576000</b></small></span><br>	
+					  
+					 <span class="idS" style="margin-left:1.7em; "> <b class="R"> forcer:  </b><small><b class="VF"> git push -f origin [ branch ]</b></small></span><br>	
+			         <span class="idS" style="margin-left:1.7em; "> <b class="R"> Sinon, reperer le fichier qui dépasse:  </b></span><br>	
+					 <span class="idS" style="margin-left:1.7em; "> <b class="V">&nbsp; l'isoler dans </b><small><b class="VF"> &nbsp; .gitignore &nbsp; </b></small></span><br>					 
 			    </details>
 			</div>
 			
