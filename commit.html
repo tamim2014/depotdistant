@@ -53,13 +53,51 @@
 		<div class="colone-contenu" id="contenu_">
 		    <!-- <h2 class="grosTitre" style="padding-top:1em"><span class="box-shadow-titre" > Commit </span></h2> -->
 		    <h2 class="grosTitre" style="padding-top:1.5em; margin-top:.7em; height:3.7em;  "><span class="box-shadow-titre" > Commit </span></h2>
-            
-            
-			<!-- <div class="planche" > -->
-			    <!-- <h1 style="margin-left:0.8em;" >Recapitulatif</h1> -->
-	           <!-- <img src="img/recapitulatif.png" class="onglet1-sujet " style=" margin-top:1em;"/>   -->
-			<!-- </div> -->
-			<p class="boiteGris" style="height:6.5em; padding:0; background:#555;" ></p>	
+			
+		    <p class="boiteGris" style="height:6.5em; padding:0; background:#555;" ></p>	 
+			<div class="plancheCadre">
+			    <details >
+			         <summary style="margin-left:0.2em; font-size:2em">Enregistrer son code<span style="font-size:0.8em"> ( sur .git) ? </span></summary>
+			         <span style="font-size:1.5em;">
+					    Lister les fichiersmodifiés(status) <small style="color:#990033; font-size:1.2em;"> avant de les enregistrer </small><br>
+					    <span class="idS" > git  <b style="color:#990033; font-size:1.2em;"> status </b>&nbsp;  </span> 
+					    <br><span class="idS" > git  <b style="color:#990033; font-size:1.2em; "> add .</b></span>
+                     </span>
+				</details>
+			</div>
+			<p class="boiteGris" style="height:18em;" ></p>
+			<div class="plancheCadre">
+			    <details >
+			         <summary style="margin-left:0.2em; font-size:2em">Commiter son code<span style="font-size:0.8em"> ( sur .git) ? </span></summary>
+			         <span style="font-size:1.5em;">
+					    <span class="idS" > git  <b style="color:#990033; font-size:1.2em;"> status </b>&nbsp;  </span> 
+					    <br><span class="idS" > git  <b style="color:#990033; font-size:1.2em; "> add .</b></span>
+					    <br><span class="idS" > git  commit <b style="color:#990033; font-size:1.2em; ">-m</b> &emsp; <small>"ce que t as fait"</small></span>
+                     </span>
+				</details>
+			</div>
+			<p class="boiteGris" style="height:18em;" ></p>	
+			<div class="plancheCadre "  >
+			    <details>
+			        <summary style="margin-left:0.2em; font-size:2em">Téléverser sur github ?</summary>
+				    <p class="paragraphe">
+                       <b style="font-size:2em;">git push <span style="color:red"> origin </span>&nbsp; master  </b>
+			        </p>
+				   &nbsp; Si tu est dans la branche: <b style="font-size:1.2em; color:#990033;">master</b>
+			    </details>
+			</div>	
+			<p class="boiteGris" style="height:18em;" ></p>	
+			<div class="plancheCadre "  >
+			    <details >
+			         <summary style="margin-left:0.2em; font-size:2em">Et<span style="font-size:0.8em"> Si tu est dans la branch B2 ? </span></summary>
+			         <span style="font-size:1.5em;">
+					    <span class="idS" > git  <b style="color:#990033; font-size:1.2em;"> checkout </b>&nbsp; master  </span> 
+					    <br><span class="idS" > git  <b style="color:#990033; font-size:1.2em; "> merge</b>&nbsp;  B2  </span>
+					    <br><span class="idS" > git push <b style="color:#990033; font-size:1.2em; "> origin</b> master</span>
+                     </span>
+				</details>
+			</div>				
+			<p class="boiteGris" style="height:18em;" ></p>		
 			<div class="plancheCadre">
 			    <details >
 			         <summary style="margin-left:0.2em; font-size:2em">Mise à jour de code<span style="font-size:0.8em"> ( sans nouveau fichier) ? </span></summary>
