@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
-	<title>Rappels javascripts</title>
+	<title>PowerShell</title>
 	<link rel="stylesheet" href="css/test3-zoning.css" >
 	<link rel="stylesheet" href="css/test3-dropdown.css" >
 	<link rel="stylesheet" href="css/sticky.css">
@@ -42,51 +42,71 @@
 		</div>
 		
 		<div class="colone-contenu" id="contenu_">
-		    <h2 class="grosTitre"><span class="box-shadow-titre" > Rappels Linux </span></h2>
+		    <h2 class="grosTitre"><span class="box-shadow-titre" > PowerShell </span></h2>
 			<div class="planche" >
-			    <h1 style="margin-left:0.8em;" >Recapitulatif</h1>
-	            <img src="img/recapitulatif.png" class="onglet1-sujet " style=" margin-top:-1em;"/>
+			    <h1 style="margin-left:0.8em;" >Commandes de base</h1>
+	            <!-- <img src="img/recapitulatif.png" class="onglet1-sujet " style=" margin-top:-1em;"/> -->
 			</div>
-			
+					
 			<div class="planche">
-			   <h3  style="margin-left:1.4em;"> Repertoire home: Commande CD </h3>
-			   <img src="img/lancer-git-bash.png" class="onglet1-sujet"   />		   
-			</div>
-			
-			
-			<div class="planche">
-			    <h4 style="margin-left:0.2em; ">En cas de bug: <small>supprimer le dépot local et recommencer</small></h4>
+			    <h2  style="margin-left:0.5em; ">LISTER LES PROCESSUS ?</h2>
                 <p class="paragraphe">
-				  <b style="font-size:2em;">ls -lha </b><br>
-                  <b style="font-size:2em;">rm -r<span style="color:red">f</span> <span class="idS" >.git</span> </b>
+				  <span style="font-size:2em;">PowerShell </span>( executer en tant qu'administrateur)<br>
                 </p>
-			</div>
-			
-			<div class="planche" style="height:auto !important;">
-			    <h4>Supprimer un fichier dont le nom est précédé d'un tiret :</h4>
-                <h5 style="font-size:2em; padding:0;">rm <span style="color:blue; ">--</span> <span style="color:red; ">-</span>fichier</h5> 
+				<p class="paragraphe">
+                  <b style="font-size:2em;">get-process </b>
+                </p>
 			</div>
 			<div class="planche">
-			    <h4 style="margin-left:0.2em; ">chmod:<br> 
-				     <small> &bull; Le premier chiffre fixe l'accès de l'usager propriétaire, <br> &bull; le deuxième pour groupe propriétaire <br> &bull; et le dernier pour les « autres ». <br><span style="color:gray">Chaque chiffre est la somme d'un ou plusieurs chiffres correspondant à des accès différents:</span><br></small>
-					  4 : lecture<br>
-                      2 : écriture<br>
-                      1 : exécution<br>
-                      0 : aucun<br>
-				</h4>
-				Tous les droits pour le proprietaire et rien pour les autres
+			    <h2  style="margin-left:0.5em; ">TRIER LES PROCESSUS(ordre alphabetique) ?</h2>
                 <p class="paragraphe">
-				  <b style="font-size:2em;">chmod 700 <span style="color:gray; font-size:.5em;">nomFichier</span> </b>
+				  <span style="font-size:2em;"><span style="font-size:.9em; color:gray;">Il faut une proprieté de l'objet</span> <span class="idS" style="color:blue" >Sort-Object</span></span><br>
                 </p>
-				Tous les droits pour le proprietaire <br> "Lecture" et "Execution" pour le reste
-                <p class="paragraphe">
-				  <b style="font-size:2em;">chmod 755 <span style="color:gray; font-size:.5em;">nomFichier</span> </b>
-                </p>
-				"Lecture/Ecriture"  pour le proprietaire et son groupe <br> "Lecture" seulement pour les autres
-                <p class="paragraphe">
-				  <b style="font-size:2em;">chmod 664 <span style="color:gray; font-size:.5em;">nomFichier</span> </b>
+				<p class="paragraphe">
+                  <b style="font-size:2em;">???</b>
                 </p>
 			</div>
+			<div class="planche">
+			    <h2  style="margin-left:0.5em; ">ARRÊTER UN PROCESSUS ?</h2>
+                <p class="paragraphe">
+				  <span style="font-size:2em;"> Stop-Process <span class="idS" style="color:red" >-Name</span> "nomDuProcessus"</span> <br>
+                </p>
+				<span style="margin-left:0.5em;">ou bien</span>
+				<p class="paragraphe">
+				  <span style="font-size:1.5em;"> Get-Process <span class="idS" style="color:red" >-Name</span> "nomDuProcessus" <b style="color:blue">|</b> Stop-Process</span><br>
+                </p>
+				<span style="margin-left:0.5em;">ou bien encore(si c'est un autre utilisateur qui l'a ouvert)</span>
+				<p class="paragraphe">
+				  <span style="font-size:1.5em;"> Get-Process <span class="idS" style="color:red" >-Name</span> "nomDuProcessus" <b style="color:blue">|</b> Stop-Process <br>-Force</span> <br>
+                </p>
+			</div>
+			<div class="planche">
+			    <h2  style="margin-left:0.5em; ">VERIFIER/CONFIRMER QU'IL EST BIEN ARRÊTÊ </h2>
+                <p class="paragraphe">
+				  <!-- <span style="font-size:2em;">PowerShell </span>( executer en tant qu'administrateur)<br> -->
+				  <code style="font-size:1.5em; color:gray; font-weight:bold;">
+				        calc<br>
+						$p = Get-Process -Name "calc"<br>
+						Stop-Process -InputObject $p<br>
+						Get-Process | Where-Object {$_.HasExited}
+				  </code>
+                </p>
+				<p class="paragraphe" style="border-color:transparent;">
+                  <code style="font-size:1.5em; color:gray;  ">
+					- ici calc est le nom du processus<br>
+					- InputObject est un paramètre qui permet de transmettre l’objet $p à Stop-Process.<br>
+					- HasExited est une proprieté de l'objet processus
+				  </code>
+                </p>
+				Source: <a  target="_blank" href="https://learn.microsoft.com/fr-fr/powershell/module/microsoft.powershell.management/stop-process?view=powershell-7.3"> Ici</a>
+			</div>
+			
+			
+			
+
+
+
+			
 			
 					
 		</div><!-- #colone-contenu -->
