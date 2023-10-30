@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
+	<title>Rappels symfony</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<link rel="stylesheet" href="css/sticky.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/symfony.css">
+	<style>
+	summary{
+	   margin-left:1.6em;
+	   padding:0.5em;
+	   background:white;
+	   width:96%;
+	   box-shadow:
+	     0px 2px 20px 0px white inset,
+		 0px 2px 10px 0px ;
+	 }
+	 .idS{padding-top:auto; padding-bottom:.17em;  padding-left:.5em ; padding-right:.5em;}
+	</style>
+</head>
+<body>
+
+	<div id="entete">
+		 <img src="img/header-image.png" class="header-image" >
+	</div>
+	<div id="menu">
+		<a href="index.html" style="background:#3d3d5c; color:#ECECEA;">Accueil</a>
+		<a href="branch.html">Branch</a>
+		<a href="commit.html">Commit</a>
+		<a href="depotdistant.html">Dépôt distant</a>
+		
+		<div class="dropdown">
+			<button class="dropdown-btn">Divers rappels</button>
+			<div class="dropdown-content">
+			    <a href="rappels-linux.html">Linux</a>
+			    <a href="powershell.html">PowerShell</a>
+			    <a href="symfony.html">Symfony</a>
+			    <a href="#">Android</a>
+			    <a href="interfaces-js.html" >DOM</a>					
+			</div>
+		</div>
+	</div>
+	<div id="contenu">
+	
+	
+		<div class="colone-laterale" id="sidbarG">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		
+		<div class="colone-contenu" id="contenu_">
+		    <h2 class="grosTitre" style="padding-top:1.5em; margin-top:1.7em; height:3.7em;  "><span class="box-shadow-titre" > Symfony </span></h2>
+		    <p class="boiteGris" style="height:10em;  background:#555;" ></p>	 
+
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+			    <!-- c'est l'attribut "float:left" qui fout la merde dans la classe .plancheCadre
+				     c'est pourquoi je l'ai mis ici à float:none
+				-->
+				<div class="plancheCadre" style="float:none; position:relative;" ><!-- le margin est déjà défini dans la classe .plancheCadre -->
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">Importer un modèle de projet ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony4(le model est: symfony/website-skeleton)</span>
+							<p class="idS paragraphe" style="margin-left:0; margin-right:0;"> <span class="cli">composer</span> create-project  <span class="numVersion">symfony/website-skeleton</span>  <span class="nommer">monProjet</span></p>
+							<span class="nommer">Symfony5</span><br>
+							<span class="idS" ><span class="cli">symfony </span> new --webapp <span class="nommer"> monProjet </span> --full </span><br> 
+							<span class="nommer">Symfony6</span><br>
+							<span class="idS" ><span class="cli">symfony</span> new --webapp  <span class="nommer"> monProjet </span> --version=<span class="numVersion">6.0.* </span></span>						
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<!--
+			################################# TEMPLATE  ################################################
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> Question ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony4</span><br>
+							<span class="idS" >Reponse1</span><br>
+							<span class="nommer">Symfony5</span><br>
+							<span class="idS" >Reponse2</span><br> 
+							<span class="nommer">Symfony6</span><br>
+							<span class="idS" >Reponse3</span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			############################################################################################
+			-->
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> J'ai seulement composer ?!</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony6</span><br>
+							<p class="idS paragraphe" style="margin-left:0; margin-right:0;"><span class="cli">composer</span> create-project <span class="numVersion">symfony/skeleton:"6.3.*"</span> <span class="nommer">monProjet</span></p>
+							<span class="idS" >cd <span class="nommer"> monProjet</span></span>
+							<p class="idS paragraphe" style="margin-left:0; margin-right:11%;"><span class="cli">composer</span> require webapp </p>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> Installer un serveur local ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony4</span><br>
+							<span class="idS" ><span class="cli">composer</span> require server - -d</span><br>
+							<span class="nommer">Symfony5</span><br>
+							<span class="idS" >Serveur intégré</span><br> 
+							<span class="nommer">Symfony6</span><br>
+							<span class="idS" >serveur intégré</span><br>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> Démarrer le serveur local ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony4</span><br>
+							<span class="idS" ><span class="cli">php bin/console </span> server&nbsp;:&nbsp;run </span><br>
+							<span class="nommer">Symfony5</span><br>
+							<span class="idS" ><span class="cli">symfony</span> server&nbsp;:&nbsp;start </span><br> 
+							<span class="nommer">Symfony6</span><br>
+							<span class="idS" ><span class="cli">symfony</span> server&nbsp;:&nbsp;start <span class="numVersion">-d</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> Ajouter un contrôleur ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony4</span><br>
+							<span class="idS" >	<span class="cli">php bin/console</span> make&nbsp;:&nbsp;controller </span><br>
+							<span class="nommer">Symfony5</span><br>
+							<span class="idS" >Idem</span><br> 
+							<span class="nommer">Symfony6</span><br>
+							<span class="idS" >Idem</span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> Ajouter Une BD ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony4</span><br>
+							<p class="idS paragraphe" style="margin-left:0; margin-right:25%;">Parametrer  DATABASE_URL dans <span style="color:blue">.env</span></p>
+							<span class="idS" ><span class="cli">php bin/console</span> doctrine:database:create</span><br>
+							<span class="nommer">Symfony5</span><br>
+							<span class="idS" >Idem</span><br> 
+							<span class="nommer">Symfony6</span><br>
+							<span class="idS" >Idem</span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> Ajouter les tables de la BD ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony4</span><br>
+							<p class="idS paragraphe" style="margin-left:0; margin-right:43%;"><span class="cli">php bin/console</span> make&nbsp;:&nbsp;entity </p>
+							<span class="idS" ><span class="cli">php bin/console</span> make&nbsp;:&nbsp;migration </span>
+							<p class="idS paragraphe" style="margin-left:0; margin-right:11%;"><span class="cli">pahp bin/console</span> doctrine&nbsp;:&nbsp;migration<span style="color:blue">s</span>&nbsp;:&nbsp;migrate </p>
+							<span class="nommer">Symfony5</span><br>
+							<span class="idS" >Idem</span><br> 
+							<span class="nommer">Symfony6</span><br>
+							<span class="idS" >Idem</span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<h5 style="margin-left:0.2em; ">Souces:</h5>
+					<p class="paragraphe">
+					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://alwayslearn.fr/comment-ca-marche/4-installer-symfony-en-local"><span style="color:blue">ways</span>learn</a>: </b>Pour le skeleton Symfony6
+					</p>
+					<p class="paragraphe">
+					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://symfony.com/doc/current/setup.html">Symfony docs officiels</a>: </b>Pour l'installation du webapp 
+					</p>
+					<p class="paragraphe">
+					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://okazy.github.io/symfony-docs/setup/symfony_server">Symfony docs officiels</a>: </b>Pour le démarrage du serveur intégré à Symfony6
+					</p>
+				</div>			
+			</div>
+		</div><!-- #colone-contenu -->	
+		
+		<div class="colone-laterale" id="sidbarD" >
+			<!-- <p class="paragraphe" style="background:#8c8b81" > -->
+			<p class="paragraphe" style="font-size:1.1em;" >
+			   &#9200; Evolution CLI<br>
+               La CLI <b class="cli">bin/console</b> est dépassée.<br> 
+               Dans Symfony6 on utilise une nouvelle CLI qui s'appelle <b class="cli">symfony</b>. Tout simplement!<br><br>
+			   Pour ce faire, il faut au préalable, installer un <span style color="blue">scoop</span>, via le terminal Powershell à l'aide des 2 commandes suivantes:<br><br>
+			    1)Set-ExecutionPolicy RemoteSigned -scope CurrentUser<br>
+				2)iwr -useb get.scoop.sh | iex<br><br>
+				Ainsi, on peut utiliser ce scoop pour installer la nouvelle CLI<br><br>
+				3) scoop install <span class="cli">symfony-cli</span>
+			</p>
+			<p class="paragraphe" style="font-size:1.1em;" >
+			   &#9200; Evolution Serveur<br>
+               Àpartir de Symfony5, un serveur web est couplé au moteur Symfony.<br>
+               Du coup, pas besoin d'installer un serveur comme dans Symfony4
+			</p>
+		</div>
+		
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer" >
+		<table class="footer-table" >
+		  <tr>
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+			 
+			 <td class="footer-td" style="width:20%;">
+                <b class="titre-video" >&emsp;Superflus</b>
+                <video  class="img footer-image"    controls="controls" >
+				         <source src="videos/commit-superflu.mp4" type="video/mp4" />			       
+				</video>	 
+			 </td>
+
+			 <td class="footer-td" style="width:20%;" >
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add("newClassName");<br>
+				 &emsp;&bull; classList.toggle("newClassName");		 
+			 </td>
+		
+		  </tr>
+		</table>
+	</div><!-- #footer -->
+    <script type="text/javascript" src="js/sticky.js"></script>
+</body>
+</html>

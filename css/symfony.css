@@ -1,0 +1,28 @@
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.step, .nommer{ color:gray; font-style:italic;}
+.step { font-weight:bold;}
+.cli{ color:#996633;}
+.numVersion{ font-family:serif; color:#990033;}
+
+
+
+
+
+
+
