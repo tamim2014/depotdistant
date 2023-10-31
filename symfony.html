@@ -20,6 +20,12 @@
 	 }
 	 .idS{padding-top:auto; padding-bottom:.17em;  padding-left:.5em ; padding-right:.5em;}
 	</style>
+	<script>
+	    function pop_coursUnJava()
+        {           
+		    window.open("s4s5s6.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+	</script>
 </head>
 <body>
 
@@ -203,6 +209,11 @@
 					<p class="paragraphe">
 					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://okazy.github.io/symfony-docs/setup/symfony_server">Symfony docs officiels</a>: </b>Pour le démarrage du serveur intégré à Symfony6
 					</p>
+					<!-- integration de la table comparative dans un popUp -->
+				    <p class="paragraphe">
+					  <!-- <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_self" href="#">Analogie</a>: </b> Vue d'ensemble Symfony4,5 et 6 -->
+					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_self" href="#" onclick="pop_coursUnJava();">Analogie</a>: </b> Vue d'ensemble Symfony4,5 et 6
+					</p>
 				</div>			
 			</div>
 		</div><!-- #colone-contenu -->	
@@ -222,7 +233,14 @@
 			<p class="paragraphe" style="font-size:1.1em;" >
 			   &#9200; Evolution Serveur<br>
                Àpartir de Symfony5, un serveur web est couplé au moteur Symfony.<br>
-               Du coup, pas besoin d'installer un serveur comme dans Symfony4
+               Du coup, pas besoin d'installer un serveur comme dans Symfony4<br>
+			   &#9200; Evolution Serveur<br>
+			   Au démarrage du serveur, l'option <span class="cli">idS</span> permet de faire tourner le serveur en arrière plan.<br>
+			   <span class="cli">symfony</span> server:start <span class="numVersion"> -d</span> <br>
+			   <span class="nommer">
+			       On peut toujours arrêter le serveur avec la commande:
+			       <span class="idS">Ctrl</span> + <span class="idS">C</span>
+			   </span>
 			</p>
 		</div>
 		

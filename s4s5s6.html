@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.step, .nommer{ color:gray; font-style:italic;}
+.step { font-weight:bold;}
+.cli{ color:#996633;}
+.numVersion{ font-family:serif; color:#990033;}
+
+/* 
+ * Attention à l'integration! ne pas factoriser le script responsif car, il specifique à cette table
+ *
+ * Pour les p'tit ecran: Attention syntaxe; i fo 1 espace entre and et ( 
+ * mon écran semble faire 1490px(15") mais c pas vrai l'ecran est tro petit c pas 15pouce 
+ * 
+ * l'overfolow ne prend pas sans le parametre white-space
+ * la valeur nowrap permet aux textes de dépasser leurs cadres conteneurs
+ *
+ */
+@media screen and (max-width: 1500px) {
+    table { 
+           overflow: auto;
+           white-space: nowrap; 
+    }
+	body{
+      font-size: 1.3em;	     	   
+	}
+}
+
+</style>
+</head>
+<body>
+
+<h2>Les 3 dernières versions Symfony</h2>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Symfony4</th>
+    <th>Symfony5</th>
+    <th>Symfony6</th>
+  </tr>
+  <tr>
+    <td class="step" style="color:transparent">Préalables</td>
+    <td></td>
+    <td></td>
+    <td>
+	     <span class="nommer">&bull; Installer scoop(via terminal powershel):</span><br> &emsp; Set-ExecutionPolicy RemoteSigned -scope CurrentUser<br> &emsp; iwr -useb get.scoop.sh | iex<br>
+	     <span class="nommer">&bull; Installer la nouvelle CLI:</span><br> &emsp;  scoop install <span class="cli">symfony-cli</span>		 
+	</td>
+  </tr>
+  <tr>
+    <td class="step">Importer un modèle de projet</td>
+    <td><span class="cli">composer</span> create-project  <span class="numVersion">modelDuProjet</span>  <span class="nommer">monProjet</span> <br> <span class="nommer">Le model du projet est </span> <span class="numVersion">symfony<b>/</b>website-skeleton</span></td> 
+    <td>
+	     <span class="cli">symfony</span> new <span class="nommer">monProjet</span> --full<br><br>
+		 <span class="nommer">On peut simplifier ainsi, à condition d'avoir pré-installer un microservice(console application ou API).</span><br>
+		 <span class="nommer"> Sinon il faut mentionner</span> --webapp
+	     
+	</td>
+    <td>
+	     <span class="nommer">&bull; Utilisation de Symfony CLI:</span><br> &emsp; <span class="cli">symfony</span> new --webapp  <span class="nommer">monProjet</span> ou bien <br> &emsp; <span class="cli">symfony</span> new --webapp  <span class="nommer">monProjet </span> --version=<span class="numVersion">6.0.*</span><br>
+	     <span class="nommer">&bull; Utilisation de Composer:</span><br> &emsp;  <span class="cli">composer</span> create-project symfony/skeleton:<span class="numVersion">"6.1.*"</span> <span class="nommer">monProjet </span><br>
+		 &emsp;  cd <span class="nommer">monProjet </span><br> 	
+		 &emsp;  <span class="cli">composer</span> require webapp 	
+	
+	
+	
+	    
+	</td>
+  </tr>
+  <tr>
+    <td class="step">Installer un serveur</td>
+    <td><span class="cli">composer</span> require server - -d</td>
+    <td>
+	    <span class="nommer">&Agrave;partir de Symfony5, un serveur web est couplé au moteur Symfony.<br> Du coup, pas besoin d'installer un serveur comme dans Symfony4</span>
+	</td>
+    <td><span class="nommer">Serveur integré</span></td>
+  </tr>
+  <tr>
+    <td class="step">Démarrer le serveur</td>
+    <td>php bin/console server:run</td>
+    <td>
+	      <span class="cli">symfony</span> server:start  <span class="nommer">    ou encore </span><br>
+	      <span class="cli">symfony</span> server:start  --port <span class="numVersion">numeroDePort </span> <span class="nommer"> ou bien</span><br>
+	      <span class="cli">symfony</span> serve
+	</td>
+    <td>
+	      <span class="cli">symfony</span> server:start  <span class="nommer">    ou encore </span><br>
+	      <span class="cli">symfony</span> server:start <span class="numVersion"> -d</span> <span class="nommer"> en arrière plan</span><br>
+	</td>
+  </tr>
+  <tr>
+    <td class="step">Ajouter un contrôleur</td>
+    <td>php bin/console make:controller</td>
+    <td><span class="nommer">Idem Symfony4</span></td>
+    <td><span class="nommer">Idem Symfony4</span></td>
+  </tr>
+  <tr>
+    <td class="step">Ajouter une BD</td>
+    <td><span style="color:gray">parametrer la variable DATABASE_URL dans le fichier</span><b style="color:blue">.env</b><br> php bin/console doctrine:database:create </td>
+    <td><span class="nommer">Idem Symfony4</span></td>
+    <td><span class="nommer">Idem Symfony4</span></td>
+  </tr>
+  <tr>
+    <td class="step">Ajouter les tables de la BD</td>
+    <td>php bin/console  make:entity<br>php bin/console make:migration<br>php bin/console doctrine:migrations:migrate </td>
+    <td><span class="nommer">Idem Symfony4</span></td>
+    <td><span class="nommer">Idem Symfony4</span></td>
+  </tr>
+</table>
+<p>
+   Remarques:<br>
+   &nbsp;&nbsp;&nbsp; La CLI <b class="cli">bin/console</b> est dépassée.<br> 
+   &nbsp;&nbsp;&nbsp; Dans Symfony6 on utilise une nouvelle CLI qui s'appelle <b class="cli">symfony</b>. Tout simplement!<br><br>
+   
+ 
+  Sources:<br>
+ &emsp;&bull; Installation du skeleton (symfony6): <a target="_blanck" href="https://alwayslearn.fr/comment-ca-marche/4-installer-symfony-en-local"><span style="color:blue">ways</span>learn</a><br>
+ &emsp;&bull; Démarrage serveur local (symfony6): <a target="_blanck" href="https://okazy.github.io/symfony-docs/setup/symfony_server">Symfony docs officiels</a><br>
+</p>
+</body>
+</html>
+
