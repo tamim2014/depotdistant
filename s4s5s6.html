@@ -1,27 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <link rel="stylesheet" href="css/symfony.css">
 <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-.step, .nommer{ color:gray; font-style:italic;}
-.step { font-weight:bold;}
-.cli{ color:#996633;}
-.numVersion{ font-family:serif; color:#990033;}
-
 /* 
  * Attention à l'integration! ne pas factoriser le script responsif car, il specifique à cette table
  *
@@ -33,21 +14,13 @@ tr:nth-child(even) {
  *
  */
 @media screen and (max-width: 1500px) {
-    table { 
-           overflow: auto;
-           white-space: nowrap; 
-    }
-	body{
-      font-size: 1.3em;	     	   
-	}
+    table { overflow: auto; white-space: nowrap; }
+	body{ font-size: 1.3em;}
 }
-
 </style>
 </head>
 <body>
-
 <h2>Les 3 dernières versions Symfony</h2>
-
 <table>
   <tr>
     <th></th>
@@ -124,16 +97,7 @@ tr:nth-child(even) {
     <td><span class="nommer">Idem Symfony4</span></td>
   </tr>
 </table>
-<p>
-   Remarques:<br>
-   &nbsp;&nbsp;&nbsp; La CLI <b class="cli">bin/console</b> est dépassée.<br> 
-   &nbsp;&nbsp;&nbsp; Dans Symfony6 on utilise une nouvelle CLI qui s'appelle <b class="cli">symfony</b>. Tout simplement!<br><br>
-   
- 
-  Sources:<br>
- &emsp;&bull; Installation du skeleton (symfony6): <a target="_blanck" href="https://alwayslearn.fr/comment-ca-marche/4-installer-symfony-en-local"><span style="color:blue">ways</span>learn</a><br>
- &emsp;&bull; Démarrage serveur local (symfony6): <a target="_blanck" href="https://okazy.github.io/symfony-docs/setup/symfony_server">Symfony docs officiels</a><br>
-</p>
+
 </body>
 </html>
 
