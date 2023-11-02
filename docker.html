@@ -21,6 +21,8 @@
 		 0px 2px 10px 0px ;
 	  
 	 }
+	 .rubi{color:#33cccc;}
+	 .option{color:#00cc99;}
 	 /* fo pas factoriser la class idS car il est utillisé sans cette modif ailleurs(les rappels réseaux) */
 	  .idS{padding-top:auto; padding-bottom:.17em;  padding-left:.5em ; padding-right:.5em;}
 	</style>
@@ -205,6 +207,194 @@
 					</details>
 				</div>			
 			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary>Voir les changements dans le conteneur</summary>
+						 <span style="font-size:1.5em;">
+							<span><span class="cli">docker</span> diff monConteneur </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary>Supprimer les images/container non utilisées</summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> system prune </span><br>
+							<span> <span class="cli">docker</span> volume prune </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			
+			
+			<h2 style="text-align:center;"> Les images</h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Afficher tous les images(lister) </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> images </span>
+						 </span>
+					</details>
+				</div>			
+			</div>		   
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Suppression </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> <span class="numVersion">rmi</span> nginx </span>
+						 </span>
+					</details>
+				</div>			
+			</div>		   
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Faire une nouvelle image depuis un conteneur </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> <span class="numVersion">commit</span> nginx </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			
+		    <h2 style="text-align:center;"> Le Dockerfile</h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Dockerfile</summary>
+						 <span style="font-size:1.1em;">
+							<span>FROM <span  class="nommer">debian:latest</span> </span><br><br>
+							<span>RUN <span class="cli">apt-get</span> update <span class="rubi">&&</span> <span class="cli">apt-get install</span> <span class="option">-y</span> <span class="cli">wget zip</span> python-pip <span class="cli">git</span> </span><br><br>
+							<span class="nommer"># Ajout Yasb</span><br>
+							<span>RUN pip <span class="cli">install</span> http://github.com/c4software/YASB/archive/master.zip </span><br><br>
+							<span>RUN <span class="cli">mkdir</span> /sources/</span><br>
+							<span>WORKDIR /sources/ </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+            <div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Build </summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> <span class="cli">docker</span> build  <span class="option">-t</span> exemple/yasb . </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+
+            <h2 style="text-align:center;"> Nettoyage</h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Suppression des images et conteneurs non utilisé </summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> <span class="cli">docker</span> system prune </span><br>
+							<span class="nommer"> <span class="cli">docker</span> volume prune </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			
+			
+			
+			<h2 style="text-align:center;"> Docker Compose</h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Lancer une stack au premier plan </summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> <span class="cli">docker</span> compose up </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Lancer une stack en arrière plan </summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> <span class="cli">docker</span> compose up <span class="option">-d</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Afficher les stacks </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> compose <span class="cli">ps</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Afficher les logs </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> compose <span class="cli">logs</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Afficher et suivre les logs </summary>
+						 <span style="font-size:1.5em;">
+							<span>  <span class="cli">docker</span> compose <span class="cli">logs</span> <span class="option">-f</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Afficher les logs d'un service </summary>
+						 <span style="font-size:1.5em;">
+							<span>docker compose logs -f NomDuService</span>
+						 </span>
+					</details>
+				</div>			
+			</div>			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Arrêter une stack </summary>
+						 <span style="font-size:1.5em;">
+							<span> docker compose down </span>
+						 </span>
+					</details>
+				</div>			
+			</div>			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Arrêter et supprimer les volumes </summary>
+						 <span style="font-size:1.5em;">
+							<span> docker compose down -v</span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+		
+
+			
 			
 			
 			
@@ -215,25 +405,8 @@
 			
 			<!-- ###################################################################### 
 			
-			ENONCE SIMPLE
-			
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Question simple?</summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer">Titre reponse1</span><br>
-							<span class="idS" >Reponse1</span><br>
-							<span class="nommer">Titre resonse2</span><br>
-							<span class="idS" >Reponse2</span><br> 
-							<span class="nommer">Titre reponse3</span><br>
-							<span class="idS" >Reponse3</span><br>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			
-			
+
+					
 			ENONCE A PLUSIEURS LIGNES
 			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
@@ -256,7 +429,7 @@
 					<details  >
 						 <summary> anglais </summary>
 						 <span style="font-size:1.5em;">
-							<span class="nommer"> français </span>
+							<span> français </span>
 						 </span>
 					</details>
 				</div>			
@@ -264,26 +437,28 @@
 			#########################################################################-->
 
 			<!--
+			
 		   <div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						 <summary> anglais </summary>
 						 <span style="font-size:1.5em;">
-							<span class="nommer"> français </span>
+							<span> français </span>
 						 </span>
 					</details>
 				</div>			
 			</div>
+			
 			-->
 			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<h5 style="margin-left:0.2em; ">Souces:</h5>
 					<p class="paragraphe">
-					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://cours.brosseau.ovh/cheatsheets/docker/">Brosseau</a></b>
+					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://cours.brosseau.ovh/cheatsheets/docker/">Valentin Brosseau</a></b>
 					</p>
 					<p class="paragraphe">
-					  <S><b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://okazy.github.io/symfony-docs/setup/symfony_server">Symfony docs officiels</a>: </b>Pour le démarrage du serveur intégré à Symfony6</s>
+					   <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://www.youtube.com/watch?v=SYMPIdMC2qo">Informatique sans complexes</a> </b>
 					</p>
 				</div>			
 			</div>
