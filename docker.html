@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
-	<title>Anglais</title>
+	<title>Docker aide mémoire</title>
 	<link rel="stylesheet" href="css/test3-zoning.css" >
 	<link rel="stylesheet" href="css/test3-dropdown.css" >
 	<link rel="stylesheet" href="css/sticky.css">
@@ -39,7 +39,7 @@
 			<button class="dropdown-btn">Divers rappels</button>
 			<div class="dropdown-content" >
 			    <a href="rappels-linux.html">Linux</a>
-			    <a href="docker.html">Docker</a>
+			    <a href="#">Docker</a>
 			    <a href="#">Ansible</a>
 			    <a href="powershell.html">PowerShell</a>
 			    <a href="symfony.html">Symfony</a>
@@ -63,21 +63,155 @@
 		
 		<div class="colone-contenu" id="contenu_">
 
-			<h2 class="grosTitre" style="padding-top:1.5em; margin-top:1.7em; height:3.7em;  "><span class="box-shadow-titre" >Anglais techinique</span></h2>
+			<h2 class="grosTitre" style="padding-top:1.5em; margin-top:1.7em; height:3.7em;  "><span class="box-shadow-titre" >Docker</span></h2>
 		    <p class="boiteGris" style="height:10em;  background:#555;" ></p>
 			
+			<!--################################################################
+			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" ><!-- le margin est déjà défini dans la classe .plancheCadre -->
+				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
-						 <summary>Choose a name for your controller class ?</summary>
+						 <summary style="margin-left:0.2em; font-size:2em">TTTTTTTTTTTT</summary>
 						 <span style="font-size:1.5em;">
-							<span class="nommer">Nommer ton contrôleur( ta classe contrôleur)</span><br>
-							<span class="idS" > Open your new controller class and add some pages!</span><br>
-							<span class="nommer">Ouvre ton contrôleur pour faire des nvelles pages</span>
+							<span class="nommer">QQQQQQQQQQQ</span><br>
+							<span class="idS" >RRRRRRRR</span><br>
+							<span class="nommer">QQQQQQQQ</span><br>
+							<span class="idS" >RRRRRRR</span><br> 
+							<span class="nommer">QQQQQQQQ</span><br>
+							<span class="idS" >RRRRRRRRRR</span><br>
 						 </span>
 					</details>
 				</div>			
 			</div>
+			
+			####################################################################-->
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">Installations</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Windows</span><br>
+							<span class="idS" >https://www.docker.com/products/docker-desktop</span><br>
+							<span class="nommer">MacOS</span><br>
+							<span class="idS" >https://www.docker.com/products/docker-desktop</span><br> 
+							<span class="nommer">Linux (Debian/Ubuntu)</span><br>
+							<span class="idS" >curl -s<span class="numVersion">SL</span> https://get.docker.com/ | sh</span><br>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">Les images</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Chercher une image</span><br>
+							<span class="idS" >docker search nginx</span><br>
+							<span class="nommer">Récupérer une image</span><br>
+							<span class="idS" >docker pull nginx</span><br> 
+							<span class="nommer">Lancer un conteneur</span><br>
+							<span class="nommer" style="color:black">
+								&nbsp;&bull;&nbsp;Démarre l’image <span class="nommer">ubuntu:latest</span><br>
+								&nbsp;&bull;&nbsp;<span class="numVersion">--rm</span> supprime le container avant de le relancer.<br>
+								&nbsp;&bull;&nbsp;Déclare le port 80 du conteneur sur le port 3000 de votre machine.<br>
+								&nbsp;&bull;&nbsp;Monte le dossier courant dans le dossier <span style="color:#006699">/data</span> du conteneur<br>
+								&nbsp;&bull;&nbsp;Note: <span class="nommer">Sur Windows Vous devez remplacer</span><br> &emsp;&emsp;<span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> <span class="nommer">&emsp;par</span><br> &emsp;&emsp;<span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span><br>
+								&emsp;Exemple:
+						    </span>
+							<p class="paragraphe">
+							    <span class="nommer"># *nix</span><br>
+								<span class="cli">docker</span> run <span class="numVersion">--rm</span> --name <span class="nommer">monConteneur</span> -it -p <span class="cli">3000</span>:80 <span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> ubuntu:latest<br><br>
+
+								<span class="nommer"># Windows</span><br>
+								<span class="cli">docker</span> run <span class="numVersion">--rm</span> --name <span class="nommer">monConteneur</span> -it -p <span class="cli">3000</span>:80 <span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span> ubuntu:latest<br>
+							</p>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary>Afficher un port(du le container)  </summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"><span class="numVersion">-p</span> portLocal:portContainer </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary>Afficher un dossier local(à l'intérieur du container) </summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> <span class="numVersion">-v</span> dossierLocal:dossierContaine </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<h2 style="text-align:center;"> Les Logs</h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Afficher les logs </summary>
+						 <span style="font-size:1.5em;">
+							<span > <span class="cli">docker</span> logs <span class="nommer">monConteneur</span></span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Afficher et suivre les logs </summary>
+						 <span style="font-size:1.5em;">
+							<span > <span class="cli">docker</span>  logs <span class="nommer">monConteneur</span> <span class="numVersion">-f</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<h2 style="text-align:center;"> Statistiques / Configuration</h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Statistiques du conteneur </summary>
+						 <span style="font-size:1.5em;">
+							<span > <span class="cli">docker</span> stats <span class="nommer">monConteneur</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Les processus du conteneur </summary>
+						 <span style="font-size:1.5em;">
+							<span > <span class="cli">docker</span> top <span class="nommer">monConteneur</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Les ports exposés</summary>
+						 <span style="font-size:1.5em;">
+							<span > <span class="cli">docker</span> port <span class="nommer">monConteneur</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			
+			
+			
+			
+			
+
 			
 			<!-- ###################################################################### 
 			
@@ -115,16 +249,7 @@
 			
 			###################################################################### -->
 			
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Created database <span class="cli">blog</span> for <span class="numVersion"> connection named default</span></summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer">Une BD <span class="cli">blog</span> est faite avec ta <span class="numVersion">connection par défaut</span> </span><br>
-						 </span>
-					</details>
-				</div>			
-			</div>
+
 			<!-- #####################################################################
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
@@ -137,136 +262,7 @@
 				</div>			
 			</div>
 			#########################################################################-->
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> make entity </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> construire une entité<br>(c'est une table décrite par une classe php) </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> class name of the entity to <span class="numVersion">create</span> or <span style="color:green">update</span> </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> nom de l'entité  <span class="numVersion">nouvelle</span> ou<br> <span style="color:green">mise à jour</span>(ça peut être une table qui existe déjà) </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Entity generated! Now let's add some fields. </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> La table est faite! Maintenant on l'ajoute quelques champs. </span><br>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> You can always add more fields later manually or by re-runing this command</summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Après tu peux tjrs ajouter d'autre champs. Soit avec cette commande, soit en allant sur phpMyAdmin </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Press <span class="idS">return</span> to stop adding fields</summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Appuyez sur <span class="idS">Entrer</span> pour arrêter d'ajouter des champs </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> New property name</summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Nom du nouveau champ( de la table ) </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Field type </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Type du nouveau champ </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Enter <span class="idS">?</span> to see all types </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Appuies sur le btn <span class="idS">?</span> pour voir tous les types<br>( pour consulter la liste des types doctrines)<br><br> Attention! <br> les types doctrine sont différentes des types SQL </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Field length </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Longueur du champ(nombre maximum de caractères.)<br><br> Par défaut, il est propposé [255] caractères </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary>Can this field  be null in the database(nullable)   </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Ce champ peut-il être nul dans la base de données<br><br> (Peut-on dans la table, laisser cette colone vide, sans valeur)</span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Add another property ? </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> D'autres champs à ajouter ? </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Enter the property name</summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Entrez le nom du champs <i>( si tu ajoutes )</i> </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-		    <div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Next: When you're ready, create a migration with <b style="color:green">make:migration</b>  </summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer"> Prochaine étape : Dès que vous vous sentez...,<br> construire les migrations (avec la commande)<br> <b style="color:green">make:migration</b> .  </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
+
 			<!--
 		   <div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
@@ -280,26 +276,14 @@
 			</div>
 			-->
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		
-			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<h5 style="margin-left:0.2em; ">Souces:</h5>
 					<p class="paragraphe">
-					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://alwayslearn.fr/comment-ca-marche/4-installer-symfony-en-local"><span style="color:blue">ways</span>learn</a>: </b>Pour le skeleton Symfony6
+					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://cours.brosseau.ovh/cheatsheets/docker/">Brosseau</a></b>
 					</p>
 					<p class="paragraphe">
-					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://okazy.github.io/symfony-docs/setup/symfony_server">Symfony docs officiels</a>: </b>Pour le démarrage du serveur intégré à Symfony6
+					  <S><b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://okazy.github.io/symfony-docs/setup/symfony_server">Symfony docs officiels</a>: </b>Pour le démarrage du serveur intégré à Symfony6</s>
 					</p>
 				</div>			
 			</div>
