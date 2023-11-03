@@ -55,77 +55,63 @@
 	<div id="contenu">
 		<div class="colone-laterale" id="sidbarG">
 			<p class="paragraphe">
-					&#9203; Début:20h<br>
-					&#8987; Fin HTML: 20h10<br>
-					&#8987; Fin CSS et test:21h05 <br>
-				
-					&#9200; Durée totale: 55mn
+				&#9203; Début:20h<br>
+				&#8987; Fin HTML: 20h10<br>
+				&#8987; Fin CSS et test:21h05 <br>
+			
+				&#9200; Durée totale: 55mn
 			</p>
 		</div>
-		
 		<div class="colone-contenu" id="contenu_">
 
 			<h2 class="grosTitre" style="padding-top:1.5em; margin-top:1.7em; height:3.7em;  "><span class="box-shadow-titre" >Docker</span></h2>
 		    <p class="boiteGris" style="height:10em;  background:#555;" ></p>
-			
-			<!--################################################################
-			
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary style="margin-left:0.2em; font-size:2em">TTTTTTTTTTTT</summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer">QQQQQQQQQQQ</span><br>
-							<span class="idS" >RRRRRRRR</span><br>
-							<span class="nommer">QQQQQQQQ</span><br>
-							<span class="idS" >RRRRRRR</span><br> 
-							<span class="nommer">QQQQQQQQ</span><br>
-							<span class="idS" >RRRRRRRRRR</span><br>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			
-			####################################################################-->
-			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						 <summary style="margin-left:0.2em; font-size:2em">Installations</summary>
 						 <span style="font-size:1.5em;">
 							<span class="nommer">Windows</span><br>
-							<span class="idS" >https://www.docker.com/products/docker-desktop</span><br>
+							<span  style="font-size:.7em" >https://www.docker.com/products/docker-desktop</span><br>
 							<span class="nommer">MacOS</span><br>
-							<span class="idS" >https://www.docker.com/products/docker-desktop</span><br> 
+							<span style="font-size:.7em" >https://www.docker.com/products/docker-desktop</span><br> 
 							<span class="nommer">Linux (Debian/Ubuntu)</span><br>
-							<span class="idS" >curl -s<span class="numVersion">SL</span> https://get.docker.com/ | sh</span><br>
+							<span style="font-size:.7em" >curl -s<span class="numVersion">SL</span> https://get.docker.com/ | sh</span><br>
 						 </span>
 					</details>
 				</div>			
 			</div>
+			<h2 style="text-align:center;"> Les images</h2>
 			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
-						 <summary style="margin-left:0.2em; font-size:2em">Les images</summary>
+						 <summary style="margin-left:0.2em; font-size:2em">chercher une image</summary>
 						 <span style="font-size:1.5em;">
 							<span class="nommer">Chercher une image</span><br>
-							<span class="idS" >docker search nginx</span><br>
+							<span class="idS" ><span class="cli">docker</span> <span class="numVersion">search</span> nginx</span><br>
 							<span class="nommer">Récupérer une image</span><br>
-							<span class="idS" >docker pull nginx</span><br> 
-							<span class="nommer">Lancer un conteneur</span><br>
-							<span class="nommer" style="color:black">
+							<span class="idS" ><span class="cli">docker</span> <span class="numVersion">pull</span> nginx</span><br><br> 
+						</span>
+					</details>
+				</div>			
+			</div>				
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details>
+						 <summary style="margin-left:0.2em; font-size:2em">Lancer un conteneur</summary>
+						 <span style="font-size:1.5em;">				
+							<p class="nommer paragraphe" style="color:black; ">
 								&nbsp;&bull;&nbsp;Démarre l’image <span class="nommer">ubuntu:latest</span><br>
 								&nbsp;&bull;&nbsp;<span class="numVersion">--rm</span> supprime le container avant de le relancer.<br>
 								&nbsp;&bull;&nbsp;Déclare le port 80 du conteneur sur le port 3000 de votre machine.<br>
 								&nbsp;&bull;&nbsp;Monte le dossier courant dans le dossier <span style="color:#006699">/data</span> du conteneur<br>
-								&nbsp;&bull;&nbsp;Note: <span class="nommer">Sur Windows Vous devez remplacer</span><br> &emsp;&emsp;<span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> <span class="nommer">&emsp;par</span><br> &emsp;&emsp;<span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span><br>
-								&emsp;Exemple:
-						    </span>
+								&nbsp;&bull;&nbsp;Note: <span class="nommer">Sur Windows Vous devez remplacer</span><br> &emsp;&emsp;<span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> <span class="nommer">&emsp;par</span><br> &emsp;&emsp;<span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span>
+						    </p>
+							&nbsp;&nbsp;Exemple:
 							<p class="paragraphe">
 							    <span class="nommer"># *nix</span><br>
 								<span class="cli">docker</span> run <span class="numVersion">--rm</span> --name <span class="nommer">monConteneur</span> -it -p <span class="cli">3000</span>:80 <span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> ubuntu:latest<br><br>
-
 								<span class="nommer"># Windows</span><br>
 								<span class="cli">docker</span> run <span class="numVersion">--rm</span> --name <span class="nommer">monConteneur</span> -it -p <span class="cli">3000</span>:80 <span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span> ubuntu:latest<br>
 							</p>
@@ -137,7 +123,7 @@
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
-						 <summary>Afficher un port(du le container)  </summary>
+						 <summary>Afficher un port(du container)  </summary>
 						 <span style="font-size:1.5em;">
 							<span class="nommer"><span class="numVersion">-p</span> portLocal:portContainer </span>
 						 </span>
@@ -154,12 +140,42 @@
 					</details>
 				</div>			
 			</div>
-			
-			<h2 style="text-align:center;"> Les Logs</h2>
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
-						 <summary> Afficher les logs </summary>
+						 <summary> Afficher tous les images(lister) </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> images </span>
+						 </span>
+					</details>
+				</div>			
+			</div>		   
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Suppression </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> <span class="numVersion">rmi</span> nginx </span>
+						 </span>
+					</details>
+				</div>			
+			</div>		   
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Faire une nouvelle image depuis un conteneur </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> <span class="numVersion">commit</span> nginx </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<h2 style="text-align:center;"> Les logs</h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Afficher les logs(journal) </summary>
 						 <span style="font-size:1.5em;">
 							<span > <span class="cli">docker</span> logs <span class="nommer">monConteneur</span></span>
 						 </span>
@@ -212,7 +228,7 @@
 					<details  >
 						 <summary>Voir les changements dans le conteneur</summary>
 						 <span style="font-size:1.5em;">
-							<span><span class="cli">docker</span> diff monConteneur </span>
+							<span><span class="cli">docker</span> diff <span class="nommer">monConteneur</span> </span>
 						 </span>
 					</details>
 				</div>			
@@ -220,49 +236,14 @@
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
-						 <summary>Supprimer les images/container non utilisées</summary>
+						 <summary>Supprimer les images et les containers non utilisés</summary>
 						 <span style="font-size:1.5em;">
-							<span> <span class="cli">docker</span> system prune </span><br>
-							<span> <span class="cli">docker</span> volume prune </span>
+							<span> <span class="cli">docker</span> <span class="numVersion">system</span> prune </span><br>
+							<span> <span class="cli">docker</span> <span class="numVersion">volume</span> prune </span>
 						 </span>
 					</details>
 				</div>			
 			</div>
-			
-			
-			
-			<h2 style="text-align:center;"> Les images</h2>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Afficher tous les images(lister) </summary>
-						 <span style="font-size:1.5em;">
-							<span> <span class="cli">docker</span> images </span>
-						 </span>
-					</details>
-				</div>			
-			</div>		   
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Suppression </summary>
-						 <span style="font-size:1.5em;">
-							<span> <span class="cli">docker</span> <span class="numVersion">rmi</span> nginx </span>
-						 </span>
-					</details>
-				</div>			
-			</div>		   
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Faire une nouvelle image depuis un conteneur </summary>
-						 <span style="font-size:1.5em;">
-							<span> <span class="cli">docker</span> <span class="numVersion">commit</span> nginx </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			
 			
 		    <h2 style="text-align:center;"> Le Dockerfile</h2>
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
@@ -285,7 +266,7 @@
 					<details  >
 						 <summary> Build </summary>
 						 <span style="font-size:1.5em;">
-							<span class="nommer"> <span class="cli">docker</span> build  <span class="option">-t</span> exemple/yasb . </span>
+							<span> <span class="cli">docker</span> build  <span class="option">-t</span> <span class="nommer">exemple/yasb</span> . </span>
 						 </span>
 					</details>
 				</div>			
@@ -304,16 +285,13 @@
 				</div>			
 			</div>
 			
-			
-			
-			
 			<h2 style="text-align:center;"> Docker Compose</h2>
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						 <summary> Lancer une stack au premier plan </summary>
 						 <span style="font-size:1.5em;">
-							<span class="nommer"> <span class="cli">docker</span> compose up </span>
+							<span> <span class="cli">docker</span> compose <span class="numVersion">up</span> </span>
 						 </span>
 					</details>
 				</div>			
@@ -323,20 +301,18 @@
 					<details  >
 						 <summary> Lancer une stack en arrière plan </summary>
 						 <span style="font-size:1.5em;">
-							<span class="nommer"> <span class="cli">docker</span> compose up <span class="option">-d</span> </span>
+							<span> <span class="cli">docker</span> compose <span class="numVersion">up</span> <span class="option">-d</span> </span>
 						 </span>
 					</details>
 				</div>			
 			</div>
-			
-			
 			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						 <summary> Afficher les stacks </summary>
 						 <span style="font-size:1.5em;">
-							<span> <span class="cli">docker</span> compose <span class="cli">ps</span> </span>
+							<span> <span class="cli">docker</span> compose <span class="numVersion">ps</span> </span>
 						 </span>
 					</details>
 				</div>			
@@ -346,7 +322,7 @@
 					<details  >
 						 <summary> Afficher les logs </summary>
 						 <span style="font-size:1.5em;">
-							<span> <span class="cli">docker</span> compose <span class="cli">logs</span> </span>
+							<span> <span class="cli">docker</span> compose <span class="numVersion">logs</span> </span>
 						 </span>
 					</details>
 				</div>			
@@ -356,7 +332,7 @@
 					<details  >
 						 <summary> Afficher et suivre les logs </summary>
 						 <span style="font-size:1.5em;">
-							<span>  <span class="cli">docker</span> compose <span class="cli">logs</span> <span class="option">-f</span> </span>
+							<span>  <span class="cli">docker</span> compose <span class="numVersion">logs</span> <span class="option">-f</span> </span>
 						 </span>
 					</details>
 				</div>			
@@ -366,7 +342,7 @@
 					<details  >
 						 <summary> Afficher les logs d'un service </summary>
 						 <span style="font-size:1.5em;">
-							<span>docker compose logs -f NomDuService</span>
+							<span>  <span class="cli">docker</span> compose <span class="numVersion">logs</span> <span class="option">-f</span> <span class="nommer">NomDuService</s> </span>
 						 </span>
 					</details>
 				</div>			
@@ -376,7 +352,7 @@
 					<details  >
 						 <summary> Arrêter une stack </summary>
 						 <span style="font-size:1.5em;">
-							<span> docker compose down </span>
+							<span> <span class="cli">docker</span> compose <span class="numVersion">down</span> </span>
 						 </span>
 					</details>
 				</div>			
@@ -386,71 +362,11 @@
 					<details  >
 						 <summary> Arrêter et supprimer les volumes </summary>
 						 <span style="font-size:1.5em;">
-							<span> docker compose down -v</span>
+							<span> <span class="cli">docker</span> compose <span class="numVersion">down</span> <span class="option">-v</span></span>
 						 </span>
 					</details>
 				</div>			
 			</div>
-			
-		
-
-			
-			
-			
-			
-			
-			
-			
-
-			
-			<!-- ###################################################################### 
-			
-
-					
-			ENONCE A PLUSIEURS LIGNES
-			
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> Question à plusieurs lignes</summary>
-						 <span style="font-size:1.5em;">
-							<span class="nommer">reponse </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			
-			###################################################################### -->
-			
-
-			<!-- #####################################################################
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> anglais </summary>
-						 <span style="font-size:1.5em;">
-							<span> français </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			#########################################################################-->
-
-			<!--
-			
-		   <div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
-				<div class="plancheCadre" style="float:none; position:relative;" >
-					<details  >
-						 <summary> anglais </summary>
-						 <span style="font-size:1.5em;">
-							<span> français </span>
-						 </span>
-					</details>
-				</div>			
-			</div>
-			
-			-->
-			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<h5 style="margin-left:0.2em; ">Souces:</h5>
@@ -459,6 +375,9 @@
 					</p>
 					<p class="paragraphe">
 					   <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://www.youtube.com/watch?v=SYMPIdMC2qo">Informatique sans complexes</a> </b>
+					</p>
+					<p class="paragraphe">
+					   <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://docs.docker.com/engine/reference/commandline/port/">Docs officiels</a> </b>
 					</p>
 				</div>			
 			</div>
