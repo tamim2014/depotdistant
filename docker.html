@@ -25,6 +25,17 @@
 	 .option{color:#00cc99;}
 	 /* fo pas factoriser la class idS car il est utillisé sans cette modif ailleurs(les rappels réseaux) */
 	  .idS{padding-top:auto; padding-bottom:.17em;  padding-left:.5em ; padding-right:.5em;}
+	  
+	  
+     /* hover video: show sous-titre */
+	 .soustitre{padding:0; margin-top:-3%;   margin-left:6.57%; display:none;}
+	 .plancheCadre:hover .soustitre{display:inline;}
+	  
+	    
+	  
+	  
+	  
+	  
 	</style>
 </head>
 <body>
@@ -66,6 +77,7 @@
 
 			<h2 class="grosTitre" style="padding-top:1.5em; margin-top:1.7em; height:3.7em;  "><span class="box-shadow-titre" >Docker</span></h2>
 		    <p class="boiteGris" style="height:10em;  background:#555;" ></p>
+
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
@@ -79,6 +91,39 @@
 							<span style="font-size:.7em" >curl -s<span class="numVersion">SL</span> https://get.docker.com/ | sh</span><br>
 						 </span>
 					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">PowerShell vs Bash</summary>
+						 <p class="paragraphe" style="font-size:1.1em">
+						     Ce sont des problèmes qui ne se posent pas quant on utilise un sysytème Linux.<br><br>
+						     &#9632; Lorsque vous utilisez le terminal powershell, tout va bien. Pour installer une image ubuntu par exemple:<br>
+							 <span class="cli">docker</span> run <span class="option">-it</span> <span class="nommer">ubuntu bash</span><br><br>
+							 &#9632; Par contre si vous utilisez un terminal qui n'est pas natif windows vous avez le message d'erreur suivant:<br>
+							 <i style="color:red; font-siez:.8em;">
+							   the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'
+							 </i><br><br>
+							 <b><i>Solution?</i></b><br>
+							 <span style="color:red">winpty</span> <span class="cli">docker</span> exec <span class="option">-it</span> <span class="nommer">idImage    nomAppli</span><br>
+							 <b><i>Exemple?</i></b><br>
+							 winpty <span class="cli">docker</span> exec <span class="option">-it</span> <span class="nommer">7039b372379f bash</span><br><br>
+							 Ok mais où trouver cet Identifiant(<span class="nommer">7039b372379f</span>) alors que l'image relative n'est pas installée?<br>
+							 <br>bah il faut l'installer au préalable via un terminal Windows(comme PowerShell)!
+
+						 </p>
+
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative; background-color:#555;  " >
+				    <!-- Solution radicale pour faire rentrer un à l'intérieur float:none; position:relative;  -->
+					<video  class="img"    controls="controls" style="float:none; position:relative; padding:0; " >
+						 <source src="videos/salomon.mp4" type="video/mp4" />			       
+					</video>
+					<img src="img/titreVideo.png"  class="soustitre" >
 				</div>			
 			</div>
 			<h2 style="text-align:center;"> Les images</h2>
@@ -100,20 +145,29 @@
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details>
 						 <summary style="margin-left:0.2em; font-size:2em">Lancer un conteneur</summary>
-						 <span style="font-size:1.5em;">				
+						 <span style="font-size:1.5em;"><br>
+                            &nbsp;&nbsp;Démarrer l’image <span class="nommer"><span class="nommer">ubuntu:latest</span></span>:						 
 							<p class="nommer paragraphe" style="color:black; ">
-								&nbsp;&bull;&nbsp;Démarre l’image <span class="nommer">ubuntu:latest</span><br>
-								&nbsp;&bull;&nbsp;<span class="numVersion">--rm</span> supprime le container avant de le relancer.<br>
-								&nbsp;&bull;&nbsp;Déclare le port 80 du conteneur sur le port 3000 de votre machine.<br>
-								&nbsp;&bull;&nbsp;Monte le dossier courant dans le dossier <span style="color:#006699">/data</span> du conteneur<br>
-								&nbsp;&bull;&nbsp;Note: <span class="nommer">Sur Windows Vous devez remplacer</span><br> &emsp;&emsp;<span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> <span class="nommer">&emsp;par</span><br> &emsp;&emsp;<span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span>
+								<u>Syntaxe de base</u><br>
+								&nbsp;&bull;&nbsp;<span class="cli">docker</span> run<br>&emsp;--name <span class="nommer">nomConteneur</span><br>&emsp;<span class="numVersion">-it</span> <span class="nommer">nomSystèmeDexploitation</span>
+						    </p>
+							<p class="nommer paragraphe" style="color:black; ">
+								<u>Options avancées</u><br>
+								&nbsp;&bull;&nbsp;<span class="numVersion">--rm</span>: <span class="nommer">Supprime le container avant de le relancer.</span><br>
+								&nbsp;&bull;&nbsp;<span class="numVersion">-v</span>: <span class="nommer">Volume de données</span> <br>
+								&nbsp;&bull;&nbsp;<span class="numVersion">-itd</span>: <span class="nommer">&Eacute;xecute en arrière plan</span> <br>
+								&nbsp;&bull;&nbsp;<span class="numVersion">-itp</span> <span class="nommer">ou</span> <span class="numVersion">-it -p</span>: <span class="nommer">Affectation de port</span> <br>
+								&nbsp;&bull;&nbsp;-p <span class="cli">3000</span>:80 <span class="nommer"> Déclare le port 80 du conteneur sur le port 3000 de votre machine.</span><br>
+								&nbsp;&bull;&nbsp;${PWD} <span class="nommer">Dossier couran(de ton PC)</span><br>
+								&nbsp;&bull;&nbsp;${PWD}:<span style="color:#006699">/data</span> <span class="nommer">Monte le dossier courant dans le dossier <span style="color:#006699">/data</span> du conteneur</span><br><br>
+								&nbsp;&bull;&nbsp;<u>Note</u>: <span class="nommer">Sur Windows, remplacer</span><br> &emsp;&emsp;<span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> <span class="nommer">&emsp;par</span><br> &emsp;&emsp;<span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span>
 						    </p>
 							&nbsp;&nbsp;Exemple:
 							<p class="paragraphe">
 							    <span class="nommer"># *nix</span><br>
-								<span class="cli">docker</span> run <span class="numVersion">--rm</span> --name <span class="nommer">monConteneur</span> -it -p <span class="cli">3000</span>:80 <span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> ubuntu:latest<br><br>
+								<span class="cli">docker</span> run <span class="numVersion">--rm</span> --name <span class="nommer">monConteneur</span> <span class="numVersion">-it</span> -p <span class="cli">3000</span>:80 <span class="cli">-v</span> ${PWD}:<span style="color:#006699">/data</span> <span class="nommer">ubuntu:latest</span><br><br>
 								<span class="nommer"># Windows</span><br>
-								<span class="cli">docker</span> run <span class="numVersion">--rm</span> --name <span class="nommer">monConteneur</span> -it -p <span class="cli">3000</span>:80 <span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span> ubuntu:latest<br>
+								<span class="cli">docker</span> run <span class="numVersion">--rm</span> --name <span class="nommer">monConteneur</span> <span class="numVersion">-it</span> -p <span class="cli">3000</span>:80 <span class="cli">-v</span> "C:\Data":<span style="color:#006699">/data</span> <span class="nommer">ubuntu:latest</span><br>
 							</p>
 						 </span>
 					</details>
