@@ -66,11 +66,7 @@
 	<div id="contenu">
 		<div class="colone-laterale" id="sidbarG">
 			<p class="paragraphe">
-				&#9203; Début:20h<br>
-				&#8987; Fin HTML: 20h10<br>
-				&#8987; Fin CSS et test:21h05 <br>
-			
-				&#9200; Durée totale: 55mn
+                Vous vous demandez surement pourquoi conteneuriser un projet ?<br><br> Et bien cela permettra à une tierce personne de tester <span class="nommer">On the fly</span> votre projet, <b> sans les lourdes installations</b> (de dépendances, etc).<br><br> L'image docker simplifie le déploiement de ton projet et facilite sa portabilité !<br><br> Dans ce cas pourquoi ne pas utiliser une machine virtuelle classique?<br> On parle de <b>Giga bits</b> dans les classiques(comme virtalBox). Un conteneur lui, ne pèse que quelques <b>Méga bits</b>. 
 			</p>
 		</div>
 		<div class="colone-contenu" id="contenu_">
@@ -101,7 +97,8 @@
 						     Ce sont des problèmes qui ne se posent pas quant on utilise un sysytème Linux.<br><br>
 						     &#9632; Lorsque vous utilisez le terminal powershell, tout va bien. Pour installer une image ubuntu par exemple:<br>
 							 <span class="cli">docker</span> run <span class="option">-it</span> <span class="nommer">ubuntu bash</span><br><br>
-							 &#9632; Par contre si vous utilisez un terminal qui n'est pas natif windows vous avez le message d'erreur suivant:<br>
+							 
+							 &#9632; Par contre, personne n'a envie de travailler sur powershell. Dans un système windows, pour utiliser un terminal qui n'est pas natif windows; vous avez le message d'erreur suivant:<br>
 							 <i style="color:red; font-siez:.8em;">
 							   the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'
 							 </i><br><br>
@@ -109,7 +106,7 @@
 							 <span style="color:red">winpty</span> <span class="cli">docker</span> exec <span class="option">-it</span> <span class="nommer">idImage    nomAppli</span><br>
 							 <b><i>Exemple?</i></b><br>
 							 winpty <span class="cli">docker</span> exec <span class="option">-it</span> <span class="nommer">7039b372379f bash</span><br><br>
-							 Ok mais où trouver cet Identifiant(<span class="nommer">7039b372379f</span>) alors que l'image relative n'est pas installée?<br>
+							 Ok mais où trouver cet Identifiant(<span class="nommer">7039b372379f</span>) alors que l'image relative ne s'installe pas?<br>
 							 <br>bah il faut l'installer au préalable via un terminal Windows(comme PowerShell)!
 
 						 </p>
@@ -117,7 +114,7 @@
 					</details>
 				</div>			
 			</div>
-			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; background:#555; ">
 				<div class="plancheCadre" style="float:none; position:relative; background-color:#555;  " >
 				    <!-- Solution radicale pour faire rentrer un à l'intérieur float:none; position:relative;  -->
 					<video  class="img"    controls="controls" style="float:none; position:relative; padding:0; " >
@@ -155,6 +152,7 @@
 								<u>Options avancées</u><br>
 								&nbsp;&bull;&nbsp;<span class="numVersion">--rm</span>: <span class="nommer">Supprime le container avant de le relancer.</span><br>
 								&nbsp;&bull;&nbsp;<span class="numVersion">-v</span>: <span class="nommer">Volume de données</span> <br>
+								&nbsp;&bull;&nbsp;<span class="numVersion">-it</span>: <span class="nommer">Terminal interactif</span> <br>
 								&nbsp;&bull;&nbsp;<span class="numVersion">-itd</span>: <span class="nommer">&Eacute;xecute en arrière plan</span> <br>
 								&nbsp;&bull;&nbsp;<span class="numVersion">-itp</span> <span class="nommer">ou</span> <span class="numVersion">-it -p</span>: <span class="nommer">Affectation de port</span> <br>
 								&nbsp;&bull;&nbsp;-p <span class="cli">3000</span>:80 <span class="nommer"> Déclare le port 80 du conteneur sur le port 3000 de votre machine.</span><br>
@@ -299,28 +297,36 @@
 				</div>			
 			</div>
 			
-		    <h2 style="text-align:center;"> Le Dockerfile</h2>
+		    <h2 style="text-align:center;"> Construire une image( en 2  étapes)</h2>
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
-						 <summary> Dockerfile</summary>
-						 <span style="font-size:1.1em;">
-							<span>FROM <span  class="nommer">debian:latest</span> </span><br><br>
-							<span>RUN <span class="cli">apt-get</span> update <span class="rubi">&&</span> <span class="cli">apt-get install</span> <span class="option">-y</span> <span class="cli">wget zip</span> python-pip <span class="cli">git</span> </span><br><br>
-							<span class="nommer"># Ajout Yasb</span><br>
-							<span>RUN pip <span class="cli">install</span> http://github.com/c4software/YASB/archive/master.zip </span><br><br>
-							<span>RUN <span class="cli">mkdir</span> /sources/</span><br>
-							<span>WORKDIR /sources/ </span>
-						 </span>
+						 <summary> 1) &Eacute;diter le Dockerfile</summary>
+						 <p style="font-size:1.1em;">
+							<p>FROM <span  class="nommer">image de base(ressource)</span> </p>
+							<p>WORKDIR <span  class="nommer">repertoir de travail</span> </p>
+							<p>COPY <span  class="nommer"> <span style="color:green">machineHôte</span><b style="color:#115">/</b>fichierSource <span style="color:green">conteneur</span><b style="color:#115">/</b>fichierDest</span> </p>
+							<p>ADD <span class="nommer">pareil que COPY.Usage d'url. Décompression</span> </p>
+							<p>RUN <span class="nommer"> lance une commande</span> </p>
+							<p>EXPOSE <span class="nommer"> ouvre un port</span> </p>
+							<p>ENV NOM <span class="nommer"> variable d'environnement</span> </p>
+							<p>VOLUME <span class="nommer"> point de montage pour le stockage de données</span> </p>
+							<p>LABEL  <span class="nommer"> metadata</span> </p>
+							
+							<p>ARG <span class="nommer"> défini la variable de build-time.</span> </p>
+							
+							<p>CMD <span class="nommer"> comande à rouler quant le fichier est lancé</span> </p>
+							<p>ENTRYPOINT <span class="nommer"><br>S'il y a d'autre commandes utilise ENTRYPOINT car, CMD ne s'écrit q'une fois. Permet de configurer(commande et parametres) un conteneur qui va rouler en tant qu’exécutable.</span> </p>
+						 </p>
 					</details>
 				</div>			
 			</div>
             <div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
-						 <summary> Build </summary>
+						 <summary> 2) Construire l'image </summary>
 						 <span style="font-size:1.5em;">
-							<span> <span class="cli">docker</span> build  <span class="option">-t</span> <span class="nommer">exemple/yasb</span> . </span>
+							<span> <span class="cli">docker</span> build  <span class="option">-t</span> <span class="nommer">nomImage   repertoire</span></span>
 						 </span>
 					</details>
 				</div>			
@@ -339,13 +345,52 @@
 				</div>			
 			</div>
 			
-			<h2 style="text-align:center;"> Docker Compose</h2>
+			<h2 style="text-align:center;"> Docker Compose(docker-compose.yaml)</h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Structure du fichier </summary>
+						 <p style="font-size:1.5em;">
+						        <small><i style="font-size:.7em;">C'est juste un fichier YAML </i></small><br> 
+						        <p class="paragraphe">
+									 version: <span class="numVersion">X.Y</span><br>
+									 services:<br>
+									 &emsp;<b>nomService(exple mysql):</b><br>
+									 &emsp;&emsp;<span class="cli">image</span>: <br> 
+									 &emsp;&emsp;<span class="cli">ports</span>: <br>
+									 &emsp;&emsp;<span class="cli">environment</span>:<br> 
+									 &emsp;&emsp;<span class="cli">volumes</span>: <br>
+									 &emsp;&emsp;<span class="cli">profile</span>: <br> 
+								</p>
+							    <small><i>Fin du fichier. Mais on a oublié un truc. il faut préciser la valeur de chaque paramètre. Pour un service mysql on peut faire par exemple: </i></small><br>
+							    <p class="paragraphe">
+									 &emsp;&emsp;<span class="cli">image</span>: <span class="nommer">mysql:8.0</span><br> 
+									 &emsp;&emsp;<span class="cli">ports</span>: <br>
+									 &emsp;&emsp;&emsp;<span class="nommer">- "3306:3306"</span><br>
+									 &emsp;&emsp;<span class="cli">environment</span>:<br>
+									 &emsp;&emsp;&emsp;<span class="nommer">- MYSQL_ROOT_PASSWORD=</span><br>
+									 &emsp;&emsp;&emsp;<span class="nommer">- MYSQL_ALLOW_EMPTY_PASSWORD=true</span><br>
+									 &emsp;&emsp;&emsp;<span class="nommer">- MYSQL_USER=petclinic</span><br>
+									 &emsp;&emsp;&emsp;<span class="nommer">- MYSQL_PASSWORD=petclinic</span><br>
+									 &emsp;&emsp;&emsp;<span class="nommer">- MYSQL_DATABASE=petclinic</span><br>
+									 
+									 &emsp;&emsp;<span class="cli">volumes</span>: <br>
+									 &emsp;&emsp;&emsp;<span class="nommer">- "./conf.d:/etc/mysql/conf.d:ro"</span><br>
+									 &emsp;&emsp;<span class="cli">profiles</span>: <br>
+									 &emsp;&emsp;&emsp;<span class="nommer">- mysql</span>
+						        </p>
+								<small><i>Là c'est bon. Pour construire mon image docker, il suffi de lancer ce fichier avec la commande suivante: </i></small><br><br>
+                                &nbsp; <span class="idS" style="text-align:center"><span class="cli">docker-compose</span> up</span>								
+						 </p>
+					</details>
+				</div>			
+			</div>
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						 <summary> Lancer une stack au premier plan </summary>
 						 <span style="font-size:1.5em;">
-							<span> <span class="cli">docker</span> compose <span class="numVersion">up</span> </span>
+							&<span> <span class="cli">docker</span> compose <span class="numVersion">up</span> </span>
 						 </span>
 					</details>
 				</div>			
@@ -356,6 +401,18 @@
 						 <summary> Lancer une stack en arrière plan </summary>
 						 <span style="font-size:1.5em;">
 							<span> <span class="cli">docker</span> compose <span class="numVersion">up</span> <span class="option">-d</span> </span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary> Récupérer la main<small>(passée en arrière plan)</small> </summary>
+						 <span style="font-size:1.5em;">
+							<span> <span class="cli">docker</span> exec   <span class="option">-it</span> <span class="nommer">idConteneur  </span> /bin/bash</span><br>
+							
+							
 						 </span>
 					</details>
 				</div>			
