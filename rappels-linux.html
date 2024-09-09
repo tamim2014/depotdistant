@@ -43,10 +43,7 @@
 		
 		<div class="colone-contenu" id="contenu_">
 		    <h2 class="grosTitre"><span class="box-shadow-titre" > Rappels Linux </span></h2>
-			<div class="planche" >
-			    <h1 style="margin-left:0.8em;" >Recapitulatif</h1>
-	            <img src="img/recapitulatif.png" class="onglet1-sujet " style=" margin-top:-1em;"/>
-			</div>
+	
 			
 			<div class="planche">
 			   <h3  style="margin-left:1.4em;"> Repertoire home: Commande CD </h3>
@@ -85,6 +82,32 @@
 				"Lecture/Ecriture"  pour le proprietaire et son groupe <br> "Lecture" seulement pour les autres
                 <p class="paragraphe">
 				  <b style="font-size:2em;">chmod 664 <span style="color:gray; font-size:.5em;">nomFichier</span> </b>
+                </p>
+			</div>
+			
+			
+			<div class="planche">
+
+				Deziper le fichier test.zip dans le dossier courant
+                <p class="paragraphe">
+				  <b style="font-size:2em;">zip -r <span style="color:gray; font-size:.5em;">test.zip</span> <span style="color:#990033;">.</span></b>
+                </p>
+				Envoyer le fichier test au serveur1 
+                <p class="paragraphe">
+				  <b style="font-size:2em;">scp <span style="color:gray; font-size:.5em;"> test </span>user@sereur1:<span style="color:#990033;">dossierDest</span> </b>
+                </p>
+				Ouvrier l'accès de fichier test à tous(all)
+                <p class="paragraphe">
+				  <b style="font-size:2em;">chmod <span style="color:#990067;"> -R </span>  a<span style="color:gray; font-size:1em;">+</span>rx  test</b>
+                </p>
+				Même question en utilisant les chiffres
+                <p class="paragraphe">
+				  <b style="font-size:2em;">chmod <span style="color:blue;"> 555 </span> test </b>
+                </p>
+				
+		        Executer le fichier test( executer un link)
+                <p class="paragraphe">
+				  <b style="font-size:2em;">??? <span style="color:blue;"> ??? </span> test.link </b>
                 </p>
 			</div>
 			
