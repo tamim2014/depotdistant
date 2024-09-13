@@ -19,7 +19,7 @@
 		 0px 2px 10px 0px ;
 	 }
 	 .idS{padding-top:auto; padding-bottom:.17em;  padding-left:.5em ; padding-right:.5em;}
-	 textarea{
+	 textarea.testReponse {
 	    margin-left:1.5%;
 		padding:1em;
 		font-size:1.2em !important;
@@ -79,8 +79,9 @@
 				<div class="plancheCadre" style="float:none; position:relative;" ><!-- le margin est déjà défini dans la classe .plancheCadre -->
 					<details  >
 						 <summary style="margin-left:0.2em; font-size:2em">Importer un modèle de projet ?</summary>
-						 <textarea cols="58" rows="1" placeholder="Saisir ici la réponse..."></textarea><br>
-						 <textarea cols="58" rows="1" placeholder="Préciser la version ..."></textarea><br><br>
+						 <textarea cols="58" rows="1"  class="testReponse" placeholder="Saisir ici la réponse..."></textarea><br>
+						 <textarea cols="58" rows="1"  class="testReponse" placeholder="Saisir ici la réponse..."></textarea><br>
+						 <textarea cols="58" rows="1"  class="testReponse" placeholder="Remarque: l'Option --webapp est virée dans symfony7"></textarea><br><br>
 						 <details  >
 							 <summary style="margin-left:0.2em; font-size:2em">Correction ...</summary>
 							 <span style="font-size:1.5em;">
@@ -89,7 +90,9 @@
 								<span class="nommer">Symfony5</span><br>
 								<span class="idS" ><span class="cli">symfony </span> new --webapp <span class="nommer"> monProjet </span> --full </span><br> 
 								<span class="nommer">Symfony6</span><br>
-								<span class="idS" ><span class="cli">symfony</span> new --webapp  <span class="nommer"> monProjet </span> --version=<span class="numVersion">6.0.* </span></span>						
+								<span class="idS" ><span class="cli">symfony</span> new --webapp  <span class="nommer"> monProjet </span> --version=<span class="numVersion">"6.0.*" </span></span><br> 
+								<span class="nommer">Symfony7</span><br>"
+								<span class="idS" ><span class="cli">symfony</span> new   <span class="nommer"> monProjet </span> --version=<span class="numVersion">"7.1.*" </span></span> 								
 							 </span>
 					     </details>
 					 
@@ -151,8 +154,8 @@
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						<summary style="margin-left:0.2em; font-size:2em"> Démarrer le serveur local ?</summary>
-                        <textarea cols="58" rows="1" placeholder="Saisir ici la réponse..."></textarea><br>
-                        <textarea cols="58" rows="1" placeholder="En arrière plan..."></textarea><br><br>
+                        <textarea cols="58" rows="1"  class="testReponse" placeholder="Saisir ici la réponse..."></textarea><br>
+                        <textarea cols="58" rows="1"  class="testReponse" placeholder="En arrière plan..."></textarea><br><br>
 						<details  >
 							 <summary style="margin-left:0.2em; font-size:2em"> Correction ...</summary>
 							 <span style="font-size:1.5em;">
@@ -190,8 +193,8 @@
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						<summary style="margin-left:0.2em; font-size:2em"> Ajouter Une BD ?</summary>
-                        <textarea cols="58" rows="1" placeholder="D'abord paramettrer .env ..."></textarea><br>
-                        <textarea cols="58" rows="1" placeholder="Ensuite nouvelle base ..."></textarea><br><br>
+                        <textarea cols="58" rows="1"  class="testReponse" placeholder="D'abord paramettrer .env ..."></textarea><br>
+                        <textarea cols="58" rows="1"  class="testReponse" placeholder="Ensuite nouvelle base ..."></textarea><br><br>
 						<details  >
 							 <summary style="margin-left:0.2em; font-size:2em"> Correction ...</summary>
 							 <span style="font-size:1.5em;">
@@ -208,9 +211,9 @@
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						 <summary style="margin-left:0.2em; font-size:2em"> Ajouter les tables de la BD ?</summary>
-                         <textarea cols="58" rows="1" placeholder="Saisir ici la réponse..."></textarea><br>
-                         <textarea cols="58" rows="1" placeholder="Deuxième commande..."></textarea><br>
-                         <textarea cols="58" rows="1" placeholder="Troisième commande..."></textarea><br><br>
+                         <textarea cols="58" rows="1"  class="testReponse" placeholder="Saisir ici la réponse..."></textarea><br>
+                         <textarea cols="58" rows="1"  class="testReponse" placeholder="Deuxième commande..."></textarea><br>
+                         <textarea cols="58" rows="1"  class="testReponse" placeholder="Troisième commande..."></textarea><br><br>
 						 
 						 
 						<details  >
