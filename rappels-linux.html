@@ -65,7 +65,7 @@
 			</div>
 			<div class="planche">
 			    <h4 style="margin-left:0.2em; ">chmod:<br> 
-				     <small> &bull; Le premier chiffre fixe l'accès de l'usager propriétaire, <br> &bull; le deuxième pour groupe propriétaire <br> &bull; et le dernier pour les « autres ». <br><span style="color:gray">Chaque chiffre est la somme d'un ou plusieurs chiffres correspondant à des accès différents:</span><br></small>
+				     <small> &bull; Le premier chiffre fixe l'accès de l'usager propriétaire:<span style="color:blue;"> u </span> <br> &bull; le deuxième pour groupe propriétaire: <span style="color:blue;"> g </span> <br> &bull; et le dernier pour les « autres »:<span style="color:blue;"> o </span> <br><span style="color:gray">Chaque chiffre est la somme d'un ou plusieurs chiffres correspondant à des accès différents:</span><br></small>
 					  4 : lecture<br>
                       2 : écriture<br>
                       1 : exécution<br>
@@ -96,7 +96,7 @@
                 <p class="paragraphe">
 				  <b style="font-size:2em;">scp <span style="color:gray; font-size:.5em;"> test </span>user@sereur1:<span style="color:#990033;">dossierDest</span> </b>
                 </p>
-				Ouvrier l'accès de fichier test à tous(all)
+				Ouvrier l'accès de fichier test à tous(all: u, g , et o)
                 <p class="paragraphe">
 				  <b style="font-size:2em;">chmod <span style="color:#990067;"> -R </span>  a<span style="color:gray; font-size:1em;">+</span>rx  test</b>
                 </p>
@@ -107,7 +107,7 @@
 				
 		        Executer le fichier test( executer un link)
                 <p class="paragraphe">
-				  <b style="font-size:2em;">??? <span style="color:blue;"> ??? </span> test.link </b>
+				  <b style="font-size:2em;">???  test.link </b>
                 </p>
 			</div>
 			
