@@ -79,15 +79,13 @@
 				<div class="plancheCadre" style="float:none; position:relative;" ><!-- le margin est déjà défini dans la classe .plancheCadre -->
 					<details  >
 						 <summary style="margin-left:0.2em; font-size:2em">Importer un modèle de projet ?</summary>
-                          
-						  <textarea cols="58" rows="2" placeholder="Saisir ici la réponse..."></textarea>
-						  <br><br>
-						 
+						 <textarea cols="58" rows="1" placeholder="Saisir ici la réponse..."></textarea><br>
+						 <textarea cols="58" rows="1" placeholder="Préciser la version ..."></textarea><br><br>
 						 <details  >
 							 <summary style="margin-left:0.2em; font-size:2em">Correction ...</summary>
 							 <span style="font-size:1.5em;">
 								<span class="nommer">Symfony4(le model est: symfony/website-skeleton)</span>
-								<p class="idS paragraphe" style="margin-left:0; margin-right:0;"> <span class="cli">composer</span> create-project  <span class="numVersion">symfony/website-skeleton</span>  <span class="nommer">monProjet</span></p>
+								<p class="idS paragraphe" style="margin-left:0; margin-right:0;"><s> <span class="cli">composer</span> create-project  <span class="numVersion">symfony/website-skeleton</span>  <span class="nommer">projet1</span></s></p>
 								<span class="nommer">Symfony5</span><br>
 								<span class="idS" ><span class="cli">symfony </span> new --webapp <span class="nommer"> monProjet </span> --full </span><br> 
 								<span class="nommer">Symfony6</span><br>
@@ -126,8 +124,8 @@
 						 <summary style="margin-left:0.2em; font-size:2em"> J'ai seulement composer ?!</summary>
 						 <span style="font-size:1.5em;">
 							<span class="nommer">Symfony6</span><br>
-							<p class="idS paragraphe" style="margin-left:0; margin-right:0;"><span class="cli">composer</span> create-project <span class="numVersion">symfony/skeleton:"6.3.*"</span> <span class="nommer">monProjet</span></p>
-							<span class="idS" >cd <span class="nommer"> monProjet</span></span>
+							<p class="idS paragraphe" style="margin-left:0; margin-right:0;"><span class="cli">composer</span> create-project <span class="numVersion">symfony/skeleton:"6.3.*"</span> <span class="nommer">projet1</span></p>
+							<span class="idS" >cd <span class="nommer"> projet1</span></span>
 							<p class="idS paragraphe" style="margin-left:0; margin-right:11%;"><span class="cli">composer</span> require webapp </p>
 						 </span>
 					</details>
@@ -153,12 +151,13 @@
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						<summary style="margin-left:0.2em; font-size:2em"> Démarrer le serveur local ?</summary>
-                        <textarea cols="58" rows="2" placeholder="Saisir ici la réponse..."></textarea><br><br>
+                        <textarea cols="58" rows="1" placeholder="Saisir ici la réponse..."></textarea><br>
+                        <textarea cols="58" rows="1" placeholder="En arrière plan..."></textarea><br><br>
 						<details  >
 							 <summary style="margin-left:0.2em; font-size:2em"> Correction ...</summary>
 							 <span style="font-size:1.5em;">
 								<span class="nommer">Symfony4</span><br>
-								<span class="idS" ><span class="cli">php bin/console </span> server&nbsp;:&nbsp;run </span><br>
+								<span class="idS" ><s><span class="cli">php bin/console </span> server&nbsp;:&nbsp;run </s></span><br>
 								<span class="nommer">Symfony5</span><br>
 								<span class="idS" ><span class="cli">symfony</span> server&nbsp;:&nbsp;start </span><br> 
 								<span class="nommer">Symfony6</span><br>
@@ -196,13 +195,10 @@
 						<details  >
 							 <summary style="margin-left:0.2em; font-size:2em"> Correction ...</summary>
 							 <span style="font-size:1.5em;">
-								<span class="nommer">Symfony4</span><br>
+								<span class="nommer">Symfony4, 5, et 6</span><br>
 								<p class="idS paragraphe" style="margin-left:0; margin-right:25%;">Parametrer  DATABASE_URL dans <span style="color:blue">.env</span></p>
 								<span class="idS" ><span class="cli">php bin/console</span> doctrine:database:create</span><br>
-								<span class="nommer">Symfony5</span><br>
-								<span class="idS" >Idem</span><br> 
-								<span class="nommer">Symfony6</span><br>
-								<span class="idS" >Idem</span>
+			
 							 </span>
 					    </details>
 					</details>
@@ -220,14 +216,11 @@
 						<details  >
 							 <summary style="margin-left:0.2em; font-size:2em"> Corrections ...</summary>
 							 <span style="font-size:1.5em;">
-								<span class="nommer">Symfony4</span><br>
+								<span class="nommer">Symfony4, 5, et 6</span><br>
 								<p class="idS paragraphe" style="margin-left:0; margin-right:43%;"><span class="cli">php bin/console</span> make&nbsp;:&nbsp;entity </p>
 								<span class="idS" ><span class="cli">php bin/console</span> make&nbsp;:&nbsp;migration </span>
 								<p class="idS paragraphe" style="margin-left:0; margin-right:11%;"><span class="cli">pahp bin/console</span> doctrine&nbsp;:&nbsp;migration<span style="color:blue">s</span>&nbsp;:&nbsp;migrate </p>
-								<span class="nommer">Symfony5</span><br>
-								<span class="idS" >Idem</span><br> 
-								<span class="nommer">Symfony6</span><br>
-								<span class="idS" >Idem</span>
+
 							 </span>
 					    </details>
 						 
