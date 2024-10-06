@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
+	<title>Commande mysql</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<link rel="stylesheet" href="css/sticky.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/symfony.css">
+	<style>
+	summary{
+	   margin-left:1.6em;
+	   padding:0.5em;
+	   background:white;
+	   width:96%;
+	   box-shadow:
+	     0px 2px 20px 0px white inset,
+		 0px 2px 10px 0px ;
+	 }
+	 .idS{padding-top:auto; padding-bottom:.17em;  padding-left:.5em ; padding-right:.5em;}
+	 textarea.testReponse {
+	    margin-left:1.5%;
+		padding:1em;
+		font-size:1.2em !important;
+		background:#ececea;
+		border:none;
+	 }
+	</style>
+	<script>
+	    function pop_coursUnJava()
+        {           
+		    window.open("s4s5s6.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+	</script>
+</head>
+<body>
+
+	<div id="entete">
+		 <img src="img/header-image.png" class="header-image" >
+	</div>
+	<div id="menu">
+		<a href="index.html" style="background:#3d3d5c; color:#ECECEA;">Accueil</a>
+		<a href="branch.html">Branch</a>
+		<a href="commit.html">Commit</a>
+		<a href="depotdistant.html">Dépôt distant</a>
+		
+		<div class="dropdown">
+			<button class="dropdown-btn">Divers rappels</button>
+			<div class="dropdown-content">
+			    <a href="rappels-linux.html">Linux</a>
+			    <a href="powershell.html">PowerShell</a>
+			    <a href="symfony.html">Symfony</a>
+			    <a href="#">Android</a>
+			    <a href="interfaces-js.html" >DOM</a>					
+			</div>
+		</div>
+	</div>
+	<div id="contenu">
+	
+	
+		<div class="colone-laterale" id="sidbarG">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		
+		<div class="colone-contenu" id="contenu_">
+		    <h2 class="grosTitre" style="padding-top:1.5em; margin-top:1.7em; height:3.7em;  "><span class="box-shadow-titre" > Commandes MySQL </span></h2>
+		    <p class="boiteGris" style="height:10em;  background:#555;" ></p>	 
+
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+			    <!-- c'est l'attribut "float:left" qui fout la merde dans la classe .plancheCadre
+				     c'est pourquoi je l'ai mis ici à float:none
+				-->
+				<div class="plancheCadre" style="float:none; position:relative;" ><!-- le margin est déjà défini dans la classe .plancheCadre -->
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">1) Connexion au serveur mysql ?</summary>
+						 <textarea cols="58" rows="1"  class="testReponse" placeholder="Lancer Laragon..."></textarea><br>
+						 <textarea cols="58" rows="1"  class="testReponse" placeholder="Ouvrir un terminal ..."></textarea><br><br>
+						 <details  >
+							 <summary style="margin-left:0.2em; font-size:2em">Correction ...</summary>
+							 <span style="font-size:1.5em;">
+								<span class="nommer">Se connecter avec son nom d'utilisateur(-u)</span>
+								<p class="idS paragraphe" style="margin-left:0; margin-right:0;"> <span class="cli">mysql</span>   <span class="numVersion"> -u </span>  <span class="nommer">root</span></p>
+								<span class="nommer"> ou ajouter l'option(-p) s'il y a un mot de passe</span>
+								<p class="idS paragraphe" style="margin-left:0; margin-right:0;"> <span class="cli">mysql</span>   <span class="numVersion"> -u </span>  <span class="nommer">root</span>  <span class="numVersion"> -p </span></p>
+							 </span>
+					     </details>
+					 
+					</details>
+				</div>			
+			</div>
+			<!--
+			################################# TEMPLATE  ################################################
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> Question ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer">Symfony4</span><br>
+							<span class="idS" >Reponse1</span><br>
+							<span class="nommer">Symfony5</span><br>
+							<span class="idS" >Reponse2</span><br> 
+							<span class="nommer">Symfony6</span><br>
+							<span class="idS" >Reponse3</span>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			############################################################################################
+			-->
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">2) Afficher la liste des BD ?</summary>
+						 <span style="font-size:1.5em;">
+							<p class="idS paragraphe" style="margin-left:0; margin-right:0;"> show databases ; </p>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">3) se rendre sur une base de données ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> Si la base s'appelle sf6(par exemple)</span><br>
+							<span class="idS" ><span class="cli">use</span> sf6</span><br>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">4) Afficher les tables ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> N'oublier pas le (s) dans tables</span><br>
+							<span class="idS" ><span class="cli">show</span> tables;</span><br>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">5) Afficher les colonnes ?</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> i fo préciser quelle table</span><br>
+							<span class="idS" ><span class="cli">describe</span> nomDeLaTable;</span><br>
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em">6) Commencer l'exploitation !</summary>
+						 <span style="font-size:1.5em;">
+							<span class="nommer"> Afficher toutes les lignes de la table personne</span><br>
+							<span class="idS" ><span class="cli"> select</span> * <span class="cli"> from</span> personne ; </span><br>
+							
+			                <span class="nommer"> Ajouter une base sf7</span><br>
+							<span class="idS" ><span class="cli"> create  database</span> sf7; </span><br>
+							
+							<span class="nommer"> Supprimer la base sf7</span><br>
+							<span class="idS" ><span class="cli"> drop  database</span> sf7; </span><br>
+						   
+						    <span class="nommer"> Ajouter la table produits</span><br>
+							<span class="idS" ><span class="cli"> create table</span> produits; </span><br>
+                                   
+								   
+			               <span class="nommer"> Renommer la table produits en ventes</span><br>
+							<span class="idS" ><span class="cli"> rename table</span> produits <span class="cli"> to </span> ventes; </span><br>
+							
+							<span class="nommer"> Supprimer la table ventes</span><br>
+							<span class="idS" ><span class="cli"> drop table</span> ventes; </span><br>
+						 
+						    <span class="nommer"> Ajouter l'utilisateur Toto</span><br>
+							<span class="idS" ><span class="cli">create user</span> 'Toto'@'localhost'  <span class="cli"> identified by </span> 'xxxx'; </span><br>
+						    
+						    <br>
+							<span class="nommer"> Changer le mot de passe de Toto</span><br>
+							<span class="idS" ><span class="cli">SET PASSWORD</span> [ <span class="cli"> FOR</span> 'Toto'@'localhost'] =  <span class="cli"> PASSWORD( </span>'nouveau_mdp' <span class="cli">) </span>; </span><br>
+						    
+							<br>
+							<span class="nommer"> Afficher les droits de Toto( si host est le nom du serveur)</span><br>
+							<span class="idS" ><span class="cli"> SHOW GRANTS FOR</span> 'Toto'@'host' ; </span><br>
+							
+							<br>
+							<span class="nommer"> Inserer des données dans une table</span><br>
+							<span class="idS" ><span class="cli"> INSERT INTO</span> nom_table (colonne1, colonne4, colonne2) <span class="cli"> VALUES</span> ('data_colonne1', 'data_colonne4', 'data_colonne2') ; </span><br>
+						     <br>
+						    <span class="nommer"> Dans la table films, changer Avatar en Avatar 2 </span><br>
+							<span class="idS" ><span class="cli"> UPDATE</span> films
+                                                <span class="cli"> SET</span> titre = 'Avatar 2'
+                                                <span class="cli"> WHERE</span> titre = 'avatar'												
+							; </span><br>
+						 
+						 </span>
+					</details>
+				</div>			
+			</div>
+			
+			
+		
+	
+
+
+
+		</div><!-- #colone-contenu -->	
+		
+		<div class="colone-laterale" id="sidbarD" >
+			<!-- <p class="paragraphe" style="background:#8c8b81" > -->
+			<p class="paragraphe" style="font-size:1.1em;" >
+			   &#9200; Evolution CLI<br>
+               La CLI <b class="cli">bin/console</b> est dépassée.<br> 
+               Dans Symfony6 on utilise une nouvelle CLI qui s'appelle <b class="cli">symfony</b>. Tout simplement!<br><br>
+			   Pour ce faire, il faut au préalable, installer un <b style="color:blue">scoop</b>, via le terminal Powershell à l'aide des 2 commandes suivantes:<br><br>
+			    1)Set-ExecutionPolicy RemoteSigned -scope CurrentUser<br>
+				2)iwr -useb get.<span style="color:blue">scoop</span>.sh | iex<br><br>
+				Ainsi, on peut utiliser ce <span style="color:blue">scoop</span> pour installer la nouvelle CLI<br><br>
+				3)<b> <span style="color:blue">scoop</span> install <span class="cli">symfony-cli</span></b>
+			</p>
+			<p class="paragraphe" style="font-size:1.1em;" >
+			   &#9200; Evolution Serveur<br>
+               Àpartir de Symfony5, un serveur web est couplé au moteur Symfony.<br>
+               Du coup, pas besoin d'installer un serveur comme dans Symfony4<br>
+			   &#9200; Evolution Serveur<br>
+			   Au démarrage du serveur, l'option <span class="numVersion"> -d</span> permet de faire tourner le serveur en arrière plan.<br>
+			   <span class="cli">symfony</span> server:start <span class="numVersion"> -d</span> <br>
+			   <span class="nommer">
+			       On peut toujours arrêter le serveur avec la commande:
+			       <span class="idS">Ctrl</span> + <span class="idS">C</span>
+			   </span>
+			</p>
+		</div>
+		
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer" >
+		<table class="footer-table" >
+		  <tr>
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+			 
+			 <td class="footer-td" style="width:20%;">
+                <b class="titre-video" >&emsp;Superflus</b>
+                <video  class="img footer-image"    controls="controls" >
+				         <source src="videos/commit-superflu.mp4" type="video/mp4" />			       
+				</video>	 
+			 </td>
+
+			 <td class="footer-td" style="width:20%;" >
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add("newClassName");<br>
+				 &emsp;&bull; classList.toggle("newClassName");		 
+			 </td>
+		
+		  </tr>
+		</table>
+	</div><!-- #footer -->
+    <script type="text/javascript" src="js/sticky.js"></script>
+</body>
+</html>

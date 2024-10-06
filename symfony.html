@@ -150,6 +150,8 @@
 					</details>
 				</div>			
 			</div>
+			
+			
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
@@ -193,7 +195,7 @@
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<details  >
 						<summary style="margin-left:0.2em; font-size:2em"> Ajouter Une BD ?</summary>
-                        <textarea cols="58" rows="1"  class="testReponse" placeholder="D'abord paramettrer .env ..."></textarea><br>
+                        <textarea cols="58" rows="1"  class="testReponse" placeholder="D'abord paramettrer .env: db_user, db_password, db_name"></textarea><br>
                         <textarea cols="58" rows="1"  class="testReponse" placeholder="Ensuite nouvelle base ..."></textarea><br><br>
 						<details  >
 							 <summary style="margin-left:0.2em; font-size:2em"> Correction ...</summary>
@@ -232,6 +234,31 @@
 					</details>
 				</div>			
 			</div>
+			<h2 style="padding-left:1em;"> Gestion des erreurs </h2>
+			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
+				<div class="plancheCadre" style="float:none; position:relative;" >
+					<details  >
+						 <summary style="margin-left:0.2em; font-size:2em"> php bin/console doctrine:database:create</summary>
+                         <textarea cols="58" rows="1"  class="testReponse" placeholder="An exception occurred in driver"></textarea><br>
+                         <textarea cols="58" rows="1"  class="testReponse" placeholder="Could not find driver"></textarea><br><br>
+                         
+						<details  >
+							 <summary style="margin-left:0.2em; font-size:2em"> Solution ...</summary>
+							 <span style="font-size:1.5em;">
+								<span class="nommer">Afficher le chemin du fichier php.ini </span><br>
+								<p class="idS paragraphe" style="margin-left:0; margin-right:43%;"> php <span class="cli">--ini</span> </p>
+                                <span class="nommer">Se rendre sur fichier php.ini </span><br>
+								<p class="idS paragraphe" style="margin-left:0; margin-right:43%;"> ctrl + clic (sur le lien affiché) </p>
+                                <span class="nommer"> décomenter l'extension pdo_mysql </span><br>
+								<p class="idS paragraphe" style="margin-left:0; margin-right:43%;"> extension = pdo_mysql </p>
+							 </span>
+					    </details>
+						 
+						 
+						 
+					</details>
+				</div>			
+			</div>
 			<div class="boiteGris" style="padding-bottom:1em; padding-top:1em; ">
 				<div class="plancheCadre" style="float:none; position:relative;" >
 					<h5 style="margin-left:0.2em; ">Souces:</h5>
@@ -248,6 +275,9 @@
 				    <p class="paragraphe">
 					  <!-- <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_self" href="#">Analogie</a>: </b> Vue d'ensemble Symfony4,5 et 6 -->
 					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_self" href="#" onclick="pop_coursUnJava();">Analogie</a>: </b> Vue d'ensemble Symfony4,5 et 6
+					</p>
+					<p class="paragraphe">
+					  <b style="font-size:1.1em;"> <a style="text-decoration:none;" target="_blanck" href="https://symfony.com/doc/current/doctrine.html">Doctrine</a>: </b> Ajouter une base de donnéees
 					</p>
 				</div>			
 			</div>
