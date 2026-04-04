@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
-	<title>Rappels javascripts</title>
+	<title>Remote(dépôt distant)</title>
 	<link rel="stylesheet" href="css/test3-zoning.css" >
 	<link rel="stylesheet" href="css/test3-dropdown.css" >
 	<link rel="stylesheet" href="css/sticky.css">
@@ -77,6 +77,51 @@
                     <img src="img/newdepot4.png"  class="onglet1-sujet "/>			   
 			    </details>
 			</div>
+			
+			
+			
+			
+			
+			<div class="planche"> 
+
+				<details style="margin-top:1em">
+			         <summary><b>Récupèrer un dépôt distant ? </b></summary>
+				  
+				      <span style="margin-left:1.7em; ">Si tu n'as pas le projet(en local): Récupère tout le projet</span><br>
+					  <span class="idS" style="margin-left:1.7em; padding-right:12em;"> git <b class="R"> clone </b>  &lt;URL_DU_REPO&gt; </span><br><br>
+					  
+					  
+					  
+					  <span style="margin-left:1.7em; ">Si tu n'as pas le projet(en local): Récupère seulement b2</span><br>
+					  <span class="idS" style="margin-left:1.7em; "> git <b class="R"> clone </b> --branch <b class="V"> &nbsp;&nbsp; b2 </b><b class="VF"> &nbsp;&nbsp; --single-branch</b> &lt;URL_DU_REPO&gt; </span><br>						 
+			    </details>
+			</div>
+			
+			
+			<div class="planche">
+			    <details style="margin-top:1em">
+			         <summary><b>Diff&eacute;fference entre <b class="R"> pull </b> et <b class="R"> clone </b>? </b></summary>
+			         <span class="idS" style="margin-left:1.7em; "><b class="R"> pull :</b> Mise à jour dépôt local(Récupère et merge) </span><br><br>
+                     <span class="idS" style="margin-left:1.7em;"><b class="R">  clone :</b> Nouveau dépôt local </span><br>						 
+			    </details>
+			    <details style="margin-top:1em">
+			         <summary><b>Diff&eacute;fference entre <b class="R"> pull </b> et <b class="R"> fetch </b>? </b></summary>
+			         <span class="idS" style="margin-left:1.7em; "><b class="R"> pull :</b> R&eacute;cupère et merge </span><br><br>
+                     <span class="idS" style="margin-left:1.7em;"><b class="R"> fetch :</b> R&eacute;cupère sans merger </span><br>						 
+			    </details>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
 			
 			<div class="planche">
@@ -99,8 +144,26 @@
 			    </details>
 			</div>
 			
-			<div class="planche">
+			<div class="planche"> 
+                <p class="paragraphe" style="width:87.4%; margin-left:1.5em; background:#ccf;"> <b>Push/Pull et Fetch</b></p><br>
 			    <details>
+			         <summary><b>Pousser la branche b2 ( <small>vers le remote</small> ) ? </b></summary>
+			         <span class="idS" style="margin-left:1.7em; "> git <b class="R"> push </b>&nbsp;&nbsp; -u <b class="V"> &nbsp;&nbsp; origin </b><b class="VF"> &nbsp;&nbsp; b2</b></span><br>		   
+			    </details>
+				<details style="margin-top:1em">
+			         <summary><b>Récuperer la branche b2 ? </b></summary>
+					  <span style="margin-left:1.7em; ">Si tu as le projet(en local): Se positionner sur b2 et faire  </span><br>
+			          <span class="idS" style="margin-left:1.7em; "> git <b class="R"> pull </b><b class="V" style="color:transparent;"> &nbsp;&nbsp; nom-repertoire-distant </b><b class="VF" style="color:transparent;"> &nbsp;&nbsp; nom-branche</b>&emsp;&emsp;</span><br><br>
+					  <span style="margin-left:1.7em; ">Si tu as le projet(en local) mais tu n'as pas la branche b2</span><br>
+			          <span class="idS" style="margin-left:1.7em; "> git <b class="R"> fetch </b>  <b class="V"> &nbsp;&nbsp; origin </b><b class="VF" style="padding-right:12em;"> &nbsp;&nbsp; b2:b2</b>  </span><br><br>					  
+			    </details>
+				<details style="margin-top:1em">
+			         <summary><b>Diff&eacute;fference entre <b class="R"> pull </b> et <b class="R"> fetch </b>? </b></summary>
+			         <span class="idS" style="margin-left:1.7em; "><b class="R"> pull :</b> R&eacute;cupère et merge </span><br><br>
+                     <span class="idS" style="margin-left:1.7em;"><b class="R"> fetch :</b> R&eacute;cupère sans merge </span><br>						 
+			    </details>
+			    <h3 style="padding-left:1.3em;">Génériques(anciennes commandes... ! ) :</h3>	
+			    <details style="margin-top:1em">
 			         <summary><b>Pousser ( <small>vers une branche distante</small> ) ? </b></summary>
 			         <span class="idS" style="margin-left:1.7em; "> git <b class="R"> push </b><b class="V"> &nbsp;&nbsp; nom-repertoire-distant </b><b class="VF"> &nbsp;&nbsp; nom-branche</b></span><br>		   
 			    </details>
@@ -108,11 +171,6 @@
 			         <summary><b>R&eacute;cuperer ( <small>une banche distante</small> ) ? </b></summary>
 			         <span class="idS" style="margin-left:1.7em; "> git <b class="R"> pull </b><b class="V"> &nbsp;&nbsp; nom-repertoire-distant </b><b class="VF"> &nbsp;&nbsp; nom-branche</b></span><br><br>
                      <span class="idS" style="margin-left:1.7em;"> git <b class="R"> fetch </b><b class="V"> &nbsp;nom-repertoire-distant </b><b class="VF"> &nbsp;&nbsp; nom-branche</b></span><br>						 
-			    </details>
-				<details style="margin-top:1em">
-			         <summary><b>Diff&eacute;fference entre <b class="R"> pull </b> et <b class="R"> fetch </b>? </b></summary>
-			         <span class="idS" style="margin-left:1.7em; "><b class="R"> pull :</b> R&eacute;cupère et merge </span><br><br>
-                     <span class="idS" style="margin-left:1.7em;"><b class="R"> fetch :</b> R&eacute;cupère sans merge </span><br>						 
 			    </details>
 			</div>
 			<div class="planche">
