@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
-	<title>Rappels javascripts</title>
+	<title>Rappels commit</title>
 	<link rel="stylesheet" href="css/test3-zoning.css" >
 	<link rel="stylesheet" href="css/test3-dropdown.css" >
 	<link rel="stylesheet" href="css/sticky.css">
@@ -189,13 +189,57 @@
 			
 			<div class="plancheCadre" >
 			    <details>
-			         <summary style="margin-left:0.2em; font-size:1.9em; ">Annuler les changements<br> &emsp; non commités</summary>
+			         <summary style="margin-left:0.2em; font-size:1.9em; ">Annuler les commits jusqu'au "first-commit"</summary>
+				     <p class="paragraphe">
+                         <b style="font-size:2em;">git  <span style="color:red">&nbsp; reset</span>&nbsp;   <span style="color:#990099">--hard</span> &emsp; first commit</b>
+			         </p>
+
+			     </details>
+			</div>
+			<p class="boiteGris" style="height:22em; " ></p>
+			
+			<div class="plancheCadre" >
+			    <details>
+			         <summary style="margin-left:0.2em; font-size:1.9em;">Annuler les changmnts non commités</summary>
 				     <p class="paragraphe">
                          <b style="font-size:2em;">git  <span style="color:red">&nbsp; reset</span>&nbsp;   <span style="color:#990099">--hard</span></b>
+			         </p>
+
+			     </details>
+			</div>
+			<p class="boiteGris" style="height:22em; " ></p>
+			
+
+			
+			<div class="plancheCadre" >
+			    <details>
+			         <summary style="margin-left:0.2em; font-size:1.9em; ">Annuler les changmnts non commités</summary>
+				     <p class="paragraphe">
+                         <b style="font-size:2em;">git  <span style="color:red">&nbsp; restore</span>&nbsp;   <span style="color:#990099; font-weight:bold;">.</span></b>
 			         </p>
 			     </details>
 			</div>
 			<p class="boiteGris" style="height:20em; " ></p>
+			
+			<div class="plancheCadre" >
+			    <h1 style="margin-left:0.2em; ">Difference <span style="color:red">restore</span> & <span style="color:red">reset</span> <span style="color:#990099">--hard</span>  </h1>
+				<p class="paragraphe">
+                  <b style="font-size:2em;"><span style="color:red">restore</span>: file argument </b>
+			    </p>
+				<p class="paragraphe">
+				 <b style="font-size:2em;"> <span style="color:red">reset </span><span style="color:#990099"> --hard</span>: commit argument</b>
+			    </p>
+				<p class="paragraphe">
+				 <b style="font-size:2em;"> HEAD → commit courant( le dernier)</b>
+			    </p>
+			    <p class="paragraphe">
+				 <b style="font-size:2em;"> HEAD~1 → commit précédent</b>
+			    </p>
+			    <p class="paragraphe">
+				 <b style="font-size:2em;"> HEAD~2 → deux commits avant</b>
+			    </p>
+			</div>
+			<p class="boiteGris" style="height:34em; " ></p>
 			
 			<div class="plancheCadre" >
 			    <h1 style="margin-left:0.2em; ">Bibliographie:</h1>
